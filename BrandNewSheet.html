@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>DND Project</title>
+</head>
+
+<div>
+	<h2>D&D Character Creator</h2>
+	<p>Welcome to the D&D 5e character creator! Please note that any class, race, and background specific abilities will not be automatically added, 
+        so we recommend looking at the Player Handbook, other supplemental pieces of DnD media. There will be a place to fill in any abilities in Step 5.</p>
+        
+        <br><br>
+
+	<h2>Step 1: Character Info, Race, and Class</h2>
+    <div class="container">
+        <div class="row">
+
+          <div class="col-lg">
+            <label for="pname">Your Name:</label><br>
+            <input type="text" id="pname" name="">
+          </div>
+      
+          <div class="col-lg">
+            <label for="cname">Character Name:</label><br>
+            <input type="text" id="cname" name="cname">
+          </div>
+          
+          <div class="col-lg">
+            <label for="align1">Alignment:</label><br>
+	            <select name="" id="align1">
+		            <option value="none">(Choose)</option>
+		            <option value="lawful">Lawful</option>
+		            <option value="neutral">Neutral</option>
+		            <option value="chaotic">Chaotic</option>
+	            </select>
+	            <select name="" id="align2">
+		            <option value="none">(Choose)</option>
+		            <option value="good">Good</option>
+		            <option value="neutral">Neutral</option>
+		            <option value="evil">Evil</option>
+	            </select><br><br>
+          </div>
+
+          <div class="col-lg">
+            <label for="background">Background:</label><br>
+	        <input type="text" id="background" name=""><br><br>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+
+            <div class="col-lg">
+                <label for="race">Race:</label><br>
+	            <input type="text" id="race" name=""><br><br>
+            </div>
+
+            <div class="col-lg">
+                <label for="subrace">Variant:</label><br>
+	            <input type="text" id="subrace" name=""><br><br>
+            </div>
+
+            <div class="col-lg">
+                <label for="level">Character Level:</label><br>
+	            <input type="number" id="strength" max=20 min=1 name=""><br><br>
+            </div>
+
+            <div class="col-lg">
+                <label for="class">Class:</label><br>
+                <input type="text" id="class" name=""><br><br>
+            </div>
+        
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-lg"></div>
+            <div class="col-lg">
+                <label for="subclass">Subclass:</label><br>
+                <input type="text" id="subclass" name=""><br><br>
+            </div>
+            <div class="col-lg"></div>
+            <div class="col-lg"></div>
+        </div>
+      </div>
+	
+
+
+    <br><br>
+	
+    <h2>Step 2: Assigning Ability Scores</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+	            <button type="button" id="rollstats">Roll 6 random stat numbers</button>
+            </div>
+            <div class="col-lg"></div>
+            <div class="col-lg">
+                    <button type="button" id="sarray">Get Standard Array</button>
+            </div>
+        </div>
+    </div>
+
+	<div id="rolledstats"></div><br>
+	    <script src = "statroller.js"></script>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+	                <label for="strength">Strength (Str):</label>
+	                <input type="number" id="strength" max=20 min=1 name=""><br>
+                </div>
+                
+                <div class="col-sm">
+	                <label for="dexterity">Dexterity (Dex):</label>
+	                <input type="number" id="dexterity" max=20 min=1 name=""><br>
+                </div>
+
+                <div class="col-sm">
+	                <label for="consitution">Constitution (Con):</label>
+	                <input type="number" id="constitution" max=20 min=1 name=""><br>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+	                <label for="intelligence">Intelligence (Int):</label>
+	                <input type="number" id="intelligence" max=20 min=1 name=""><br>
+                </div>
+                
+                <div class="col-sm">
+                    <label for="wisdom">Wisdom (Wis):</label>
+                    <input type="number" id="wisdom" max=20 min=1 name=""><br>
+                </div>
+
+                <div class="col-sm">
+	                <label for="charisma">Charisma (Cha):</label>
+	                <input type="number" id="charisma" max=20 min=1 name=""><br>
+                </div>
+
+            </div>
+        </div>
+	
+        <!-- (Temporary Note: I'd like to see if we can put the stat modifiers after each text box. Modifiers are how these stats actually 
+        affect your rolls and abilties, and are determined by (stat-10)/2 (yes, this means you can have negative modifiers for low stats). 
+        So for example, if you have a 14 in Constitution, then any rolls that require Constitution get +2, but if you have an 8 in Intelligence,
+         then any rolls that require Intelligence get -1)-->
+
+
+         <br><br><br><br>
+    
+    
+    <h2>Step 3: Proficiency, Saving Throws and Abilities</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg"></div>
+            <div class="col-lg">
+	            <label for="profbon">Proficiency Bonus:</label>
+	            <input type="number" id="profbon" max=6 min=2 name="" value=2>
+            </div>
+            <div class="col-lg"></div>
+        </div>
+    </div>
+	<p>These parts will mostly be filled out automatically by using your Stats. Click the checkmark near each Saving Throw or Ability you have proficiency in.</p>
+	
+    <!-- (Temporary Note: We will be putting the bonuses for saving throws and abilities after the checkbox. They're calculated by taking the
+         modifier from the stat each is associated with (for saving throws it's whatever stat it is, for abilities it will always say what stat
+          is associated after it) and adding your proficiency bonus if you have proficiency in it.)-->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <h3>Saving Throws</h3>
+                <input type="checkbox" id="strsave" value="">
+                <label for="strsave">Strength</label><br>
+                <input type="checkbox" id="dexsave" value="">
+                <label for="dexsave">Dexterity</label><br>
+                <input type="checkbox" id="consave" value="">
+                <label for="consave">Constitution</label><br>
+                <input type="checkbox" id="intsave" value="">
+                <label for="intsave">Intelligence</label><br>
+                <input type="checkbox" id="wissave" value="">
+                <label for="wissave">Wisdom</label><br>
+                <input type="checkbox" id="chasave" value="">
+                <label for="chasave">Charisma</label><br>
+            </div>
+            
+            <div class="col-lg">
+            </div>
+
+            <div class="col-lg">
+                <h3>Abilities</h3>
+                <input type="checkbox" id="acrobatics" value="">
+                <label for="acrobatics">Acrobatics (Str)</label><br>
+                <input type="checkbox" id="animalhandling" value="">
+                <label for="animalhandling">Animal Handling (Wis)</label><br>
+                <input type="checkbox" id="arcana" value="">
+                <label for="arcana">Arcana (Int)</label><br>
+                <input type="checkbox" id="athletics" value="">
+                <label for="athletics">Athletics (Str)</label><br>
+                <input type="checkbox" id="deception" value="">
+                <label for="deception">Deception (Cha)</label><br>
+                <input type="checkbox" id="history" value="">
+                <label for="history">History (Int)</label><br>
+                <input type="checkbox" id="insight" value="">
+                <label for="insight">Insight (Wis)</label><br>
+                <input type="checkbox" id="intimidation" value="">
+                <label for="intimidation">Intimidation (Cha)</label><br>
+                <input type="checkbox" id="investigation" value="">
+                <label for="investigation">Investigation (Int)</label><br>
+                <input type="checkbox" id="medicine" value="">
+                <label for="medicine">Medicine (Wis)</label><br>
+                <input type="checkbox" id="nature" value="">
+                <label for="nature">Nature (Int)</label><br>
+                <input type="checkbox" id="perception" value="">
+                <label for="perception">Perception (Wis)</label><br>
+                <input type="checkbox" id="performance" value="">
+                <label for="performance">Performance (Cha)</label><br>
+                <input type="checkbox" id="persuasion" value="">
+                <label for="persuasion">Persuasion (Cha)</label><br>
+                <input type="checkbox" id="religion" value="">
+                <label for="religion">Religion (Int)</label><br>
+                <input type="checkbox" id="sleight" value="">
+                <label for="sleight">Sleight of Hand (Dex)</label><br>
+                <input type="checkbox" id="stealth" value="">
+                <label for="stealth">Stealth (Dex)</label><br>
+                <input type="checkbox" id="survival" value="">
+                <label for="survival">Survival (Wis)</label><br>
+            </div>
+
+        </div>
+    </div>
+
+
+    <br><br>
+
+
+	<h2>Step 4: Battle Stats</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+	            <label for="ac">Armor Class:</label>
+	            <input type="number" id="ac" max=20 min=1 name=""><br>
+            </div>
+
+            <div class="col-sm">
+	            <!--(Temporary Note: This is usually 10+dex modifier, but can be changed with armor, so probably best to just have it be a manual input)-->
+	            <p>Initiative:</p>
+            </div>
+
+            <div class="col-sm">
+	            <!--(Temporary Note: This is just your Dex modifier)</p> -->
+	            <label for="speed">Speed:</label>
+	            <input type="number" id="ac" name="">
+            </div>
+
+            <div class="col-sm">
+	<!--(Temporary Note: This <i>is</i> race dependant, but for simplicity sake I might just make it a manual input)-->
+	            <label for="mhp">Maximum Hit Points:</label>
+	            <input type="number" id="ac" name=""><br><br>
+            </div>
+
+            <div class="col-sm">
+	            <label for="initiative">Number of Hit Dice:</label>
+	            <input type="text" id="initiative" name="">
+            </div>
+        </div>
+    </div>
+	<!--Temporary Note: This is just your character level)-->
+
+
+    <br><br>
+
+
+	<h2>Step 5: Abilities, Equipment, Spellcasting, Etc.</h2>
+
+	<p>Depending on the options you chose above, you will gain different abilities, equipment, and spells. Feel free to use this box to keep track of them.</p>
+	<textarea id="misc" name="misc" rows="10" cols="150"></textarea>
+	
+
+    <br><br>
+    
+    
+    <h2>Step 6: Export</h2>
+
+	<p>You're almost done! Just click the buttons below to save different versions of your character sheet. You can use the .json file you get 
+        to edit your character sheet later, and the .pdf file to turn this information into a good looking character sheet!</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <button type="button">Export as .json file</button>
+                </div>
+                <div class="col-lg"></div>
+                <div class="col-lg"></div>
+                <div class="col-lg">
+                    <button type="button">Export as .pdf file</button>
+                </div>
+            </div>
+        </div>
+
+        <br>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+h2{
+    text-align:center;
+}
+
+input {
+    text-align:center;
+}
+
+p, li, ul{
+    text-align:center;
+}
+
+textarea, #misc{
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
+}
