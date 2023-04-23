@@ -1,8 +1,5 @@
+/* General */
 h2{
-    text-align:center;
-}
-
-input {
     text-align:center;
 }
 
@@ -10,6 +7,30 @@ p, li, ul{
     text-align:center;
 }
 
+/* Header */
+#header{
+    background-color: #290000;
+    color: #fffebd;
+    padding: 10px;
+}
+
+#header > h2{
+    font-size: 40px;
+}
+
+#step-1{
+    background-color: #f7ce65;
+    padding: 10px;
+    color: #030303
+}
+
+#step-2{
+    background-color: #930c10;
+    padding: 10px;
+    color: #fffebd;
+}
+
+/* Step 5 */
 textarea, #misc{
     margin-right:auto;
     margin-left:auto;
