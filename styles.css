@@ -30,6 +30,24 @@ p, li, ul{
     color: #fffebd;
 }
 
+#step-3{
+    background-color: #f7ce65;
+    padding: 10px;
+    color: #030303
+}
+
+#step-4{
+    background-color: #930c10;
+    padding: 10px;
+    color: #fffebd;
+}
+
+#step-5{
+    background-color: #f7ce65;
+    padding: 10px;
+    color: #030303
+}
+
 /* Step 5 */
 textarea, #misc{
     margin-right:auto;

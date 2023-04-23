@@ -30,7 +30,7 @@
         </p>
       </div>
       
-      <br>
+      <br><br>
 
     <div>
         <div id="step-1">
@@ -179,146 +179,147 @@
                 then any rolls that require Intelligence get -1)-->
             </div>
 
-            <br><br><br><br>
+            <br><br>
         
-        
-        <h2>Step 3: Proficiency, Saving Throws and Abilities</h2>
+        <div id="step-3">
+            <h2>Step 3: Proficiency, Saving Throws and Abilities</h2>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg"></div>
-                <div class="col-lg">
-                    <label for="profbon">Proficiency Bonus:</label>
-                    <input type="number" id="profbon" max=6 min=2 name="" value=2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg"></div>
+                    <div class="col-lg">
+                        <label for="profbon">Proficiency Bonus:</label>
+                        <input type="number" id="profbon" max=6 min=2 name="" value=2>
+                    </div>
+                    <div class="col-lg"></div>
                 </div>
-                <div class="col-lg"></div>
             </div>
-        </div>
-        <p>These parts will mostly be filled out automatically by using your Stats. Click the checkmark near each Saving Throw or Ability you have proficiency in.</p>
-        
-        <!-- (Temporary Note: We will be putting the bonuses for saving throws and abilities after the checkbox. They're calculated by taking the
-            modifier from the stat each is associated with (for saving throws it's whatever stat it is, for abilities it will always say what stat
-            is associated after it) and adding your proficiency bonus if you have proficiency in it.)-->
+            <p>These parts will mostly be filled out automatically by using your Stats. Click the checkmark near each Saving Throw or Ability you have proficiency in.</p>
+            
+            <!-- (Temporary Note: We will be putting the bonuses for saving throws and abilities after the checkbox. They're calculated by taking the
+                modifier from the stat each is associated with (for saving throws it's whatever stat it is, for abilities it will always say what stat
+                is associated after it) and adding your proficiency bonus if you have proficiency in it.)-->
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg">
-                    <h3>Saving Throws</h3>
-                    <input type="checkbox" id="strsave" value="">
-                    <label for="strsave">Strength</label><br>
-                    <input type="checkbox" id="dexsave" value="">
-                    <label for="dexsave">Dexterity</label><br>
-                    <input type="checkbox" id="consave" value="">
-                    <label for="consave">Constitution</label><br>
-                    <input type="checkbox" id="intsave" value="">
-                    <label for="intsave">Intelligence</label><br>
-                    <input type="checkbox" id="wissave" value="">
-                    <label for="wissave">Wisdom</label><br>
-                    <input type="checkbox" id="chasave" value="">
-                    <label for="chasave">Charisma</label><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg">
+                        <h3>Saving Throws</h3>
+                        <input type="checkbox" id="strsave" value="">
+                        <label for="strsave">Strength</label><br>
+                        <input type="checkbox" id="dexsave" value="">
+                        <label for="dexsave">Dexterity</label><br>
+                        <input type="checkbox" id="consave" value="">
+                        <label for="consave">Constitution</label><br>
+                        <input type="checkbox" id="intsave" value="">
+                        <label for="intsave">Intelligence</label><br>
+                        <input type="checkbox" id="wissave" value="">
+                        <label for="wissave">Wisdom</label><br>
+                        <input type="checkbox" id="chasave" value="">
+                        <label for="chasave">Charisma</label><br>
+                    </div>
+
+                    <div class="col-lg"></div>
+                    
+                    <div class="col-lg">
+                        <h3>Abilities</h3>
+                        <input type="checkbox" id="acrobatics" value="">
+                        <label for="acrobatics">Acrobatics (Str)</label><br>
+                        <input type="checkbox" id="animalhandling" value="">
+                        <label for="animalhandling">Animal Handling (Wis)</label><br>
+                        <input type="checkbox" id="arcana" value="">
+                        <label for="arcana">Arcana (Int)</label><br>
+                        <input type="checkbox" id="athletics" value="">
+                        <label for="athletics">Athletics (Str)</label><br>
+                        <input type="checkbox" id="deception" value="">
+                        <label for="deception">Deception (Cha)</label><br>
+                        <input type="checkbox" id="history" value="">
+                        <label for="history">History (Int)</label><br>
+                    </div>
+
+                    <div class="col-lg">
+                        <br><br>
+                        <input type="checkbox" id="insight" value="">
+                        <label for="insight">Insight (Wis)</label><br>
+                        <input type="checkbox" id="intimidation" value="">
+                        <label for="intimidation">Intimidation (Cha)</label><br>
+                        <input type="checkbox" id="investigation" value="">
+                        <label for="investigation">Investigation (Int)</label><br>
+                        <input type="checkbox" id="medicine" value="">
+                        <label for="medicine">Medicine (Wis)</label><br>
+                        <input type="checkbox" id="nature" value="">
+                        <label for="nature">Nature (Int)</label><br>
+                        <input type="checkbox" id="perception" value="">
+                        <label for="perception">Perception (Wis)</label><br>
+                    </div>
+
+                    <div class="col-lg">
+                        <br><br>
+                        <input type="checkbox" id="performance" value="">
+                        <label for="performance">Performance (Cha)</label><br>
+                        <input type="checkbox" id="persuasion" value="">
+                        <label for="persuasion">Persuasion (Cha)</label><br>
+                        <input type="checkbox" id="religion" value="">
+                        <label for="religion">Religion (Int)</label><br>
+                        <input type="checkbox" id="sleight" value="">
+                        <label for="sleight">Sleight of Hand (Dex)</label><br>
+                        <input type="checkbox" id="stealth" value="">
+                        <label for="stealth">Stealth (Dex)</label><br>
+                        <input type="checkbox" id="survival" value="">
+                        <label for="survival">Survival (Wis)</label><br>
+                    </div>
+
                 </div>
-
-                <div class="col-lg"></div>
-                
-                <div class="col-lg">
-                    <h3>Abilities</h3>
-                    <input type="checkbox" id="acrobatics" value="">
-                    <label for="acrobatics">Acrobatics (Str)</label><br>
-                    <input type="checkbox" id="animalhandling" value="">
-                    <label for="animalhandling">Animal Handling (Wis)</label><br>
-                    <input type="checkbox" id="arcana" value="">
-                    <label for="arcana">Arcana (Int)</label><br>
-                    <input type="checkbox" id="athletics" value="">
-                    <label for="athletics">Athletics (Str)</label><br>
-                    <input type="checkbox" id="deception" value="">
-                    <label for="deception">Deception (Cha)</label><br>
-                    <input type="checkbox" id="history" value="">
-                    <label for="history">History (Int)</label><br>
-                </div>
-
-                <div class="col-lg">
-                    <br><br>
-                    <input type="checkbox" id="insight" value="">
-                    <label for="insight">Insight (Wis)</label><br>
-                    <input type="checkbox" id="intimidation" value="">
-                    <label for="intimidation">Intimidation (Cha)</label><br>
-                    <input type="checkbox" id="investigation" value="">
-                    <label for="investigation">Investigation (Int)</label><br>
-                    <input type="checkbox" id="medicine" value="">
-                    <label for="medicine">Medicine (Wis)</label><br>
-                    <input type="checkbox" id="nature" value="">
-                    <label for="nature">Nature (Int)</label><br>
-                    <input type="checkbox" id="perception" value="">
-                    <label for="perception">Perception (Wis)</label><br>
-                </div>
-
-                <div class="col-lg">
-                    <br><br>
-                    <input type="checkbox" id="performance" value="">
-                    <label for="performance">Performance (Cha)</label><br>
-                    <input type="checkbox" id="persuasion" value="">
-                    <label for="persuasion">Persuasion (Cha)</label><br>
-                    <input type="checkbox" id="religion" value="">
-                    <label for="religion">Religion (Int)</label><br>
-                    <input type="checkbox" id="sleight" value="">
-                    <label for="sleight">Sleight of Hand (Dex)</label><br>
-                    <input type="checkbox" id="stealth" value="">
-                    <label for="stealth">Stealth (Dex)</label><br>
-                    <input type="checkbox" id="survival" value="">
-                    <label for="survival">Survival (Wis)</label><br>
-                </div>
-
             </div>
         </div>
 
 
         <br><br>
 
+        <div id="step-4">
+            <h2>Step 4: Battle Stats</h2>
 
-        <h2>Step 4: Battle Stats</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="ac">Armor Class:</label>
+                        <input type="number" id="ac" max=20 min=1 name=""><br>
+                    </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <label for="ac">Armor Class:</label>
-                    <input type="number" id="ac" max=20 min=1 name=""><br>
-                </div>
+                    <div class="col-sm">
+                        <!--(Temporary Note: This is usually 10+dex modifier, but can be changed with armor, so probably best to just have it be a manual input)-->
+                        <p>Initiative:</p>
+                    </div>
 
-                <div class="col-sm">
-                    <!--(Temporary Note: This is usually 10+dex modifier, but can be changed with armor, so probably best to just have it be a manual input)-->
-                    <p>Initiative:</p>
-                </div>
+                    <div class="col-sm">
+                        <!--(Temporary Note: This is just your Dex modifier)</p> -->
+                        <label for="speed">Speed:</label>
+                        <input type="number" id="ac" name="">
+                    </div>
 
-                <div class="col-sm">
-                    <!--(Temporary Note: This is just your Dex modifier)</p> -->
-                    <label for="speed">Speed:</label>
-                    <input type="number" id="ac" name="">
-                </div>
+                    <div class="col-sm">
+            <!--(Temporary Note: This <i>is</i> race dependant, but for simplicity sake I might just make it a manual input)-->
+                        <label for="mhp">Maximum Hit Points:</label>
+                        <input type="number" id="ac" name=""><br><br>
+                    </div>
 
-                <div class="col-sm">
-        <!--(Temporary Note: This <i>is</i> race dependant, but for simplicity sake I might just make it a manual input)-->
-                    <label for="mhp">Maximum Hit Points:</label>
-                    <input type="number" id="ac" name=""><br><br>
-                </div>
-
-                <div class="col-sm">
-                    <label for="initiative">Number of Hit Dice:</label>
-                    <input type="text" id="initiative" name="">
+                    <div class="col-sm">
+                        <label for="initiative">Number of Hit Dice:</label>
+                        <input type="text" id="initiative" name="">
+                    </div>
                 </div>
             </div>
+            <!--Temporary Note: This is just your character level)-->
         </div>
-        <!--Temporary Note: This is just your character level)-->
-
 
         <br><br>
 
+        <div id="step-5">
+            <h2>Step 5: Abilities, Equipment, Spellcasting, Etc.</h2>
 
-        <h2>Step 5: Abilities, Equipment, Spellcasting, Etc.</h2>
-
-        <p>Depending on the options you chose above, you will gain different abilities, equipment, and spells. Feel free to use this box to keep track of them.</p>
-        <textarea id="misc" name="misc" rows="10" cols="150"></textarea>
-        
+            <p>Depending on the options you chose above, you will gain different abilities, equipment, and spells. Feel free to use this box to keep track of them.</p>
+            <textarea id="misc" name="misc" rows="10" cols="150"></textarea>
+        </div>
 
         <br><br>
         
