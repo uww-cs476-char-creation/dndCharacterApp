@@ -10,7 +10,7 @@ var rollStats = function() {
 		[0, 0, 0, 0]
 	];
 	var stats = [0, 0, 0, 0, 0, 0];
-	var html_stuff = "<p>Stats obtained by rolling 4d6, dropping the lowest (crossed out) number, and adding the rest together.</p><ul>";
+	var html_stuff = "<p>Stats obtained by rolling 4d6, dropping the lowest (crossed out) number, and adding the rest together.</p><ul style='list-style:none'>";
 	for (var i = 0; i < stats.length; i++) {
 
 		for (var j = 0; j < 4; j++) {
@@ -46,7 +46,7 @@ var rollStats = function() {
 
 var standardArray = function() {
 	var stats = [15, 14, 13, 12, 10, 8];
-	var html_stuff = "<p>This is the Standard Array as denoted by the player handbook</p><ul>";
+	var html_stuff = "<p>This is the Standard Array as denoted by the player handbook</p><ul style='list-style:none'>";
 	for (var i = 0; i < stats.length; i++) {
 		html_stuff += "<li>";
 		html_stuff += "<strong>" + stats[i] + "</strong>";
