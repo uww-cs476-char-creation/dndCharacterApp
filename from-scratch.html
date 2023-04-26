@@ -32,7 +32,7 @@
       
     <div class="parallax">
         <br><br>
-
+        <form method="post" action="generate_pdf.php">
         <div>
             <div id="step-1">
                 <h2>Step 1: Character Info, Race, and Class</h2>
@@ -374,19 +374,17 @@
                     to edit your character sheet later, and the .pdf file to turn this information into a good looking character sheet!</p>
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg">
-                                <button type="button">Export as .json file</button>
-                            </div>
-                            <div class="col-lg"></div>
                             <div class="col-lg"></div>
                             <div class="col-lg">
-                                <button type="button">Export as .pdf file</button>
+                                <input type="submit" name="submit" value="Export">
                             </div>
                         </div>
                     </div>
                 <br>
             </div>
-    </div>        
+    </div>
+    </form>
+       
 
 </body>
 
