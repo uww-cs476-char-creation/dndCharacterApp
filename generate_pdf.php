@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['submit'])) {
     // Include the TCPDF single file version
-    require('tcpdf/tcpdf.php');
+    require('/home/projects/cs476/dndCharacterApp/tcpdf_6_3_2/tcpdf/tcpdf.php');
 
     // Get the HTML content of the form
     $html = file_get_contents('from-scratch.html');
