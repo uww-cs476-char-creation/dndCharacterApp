@@ -12,8 +12,8 @@ if (isset($_POST['submit'])) {
     // Set document information
     $pdf->SetCreator(PDF_CREATOR);
     $pdf->SetAuthor('Your Name');
-    $pdf->SetTitle('Form Submission');
-    $pdf->SetSubject('Form Submission');
+    $pdf->SetTitle('dnd-character-pdf');
+    $pdf->SetSubject('DND Character');
 
     // Add a page
     $pdf->AddPage();
