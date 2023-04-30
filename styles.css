@@ -125,6 +125,26 @@ div.OverButton {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #290000;
+    color: #fffebd;
+    z-index: 2;
+    height: 250px;
+    width: 850px;
+  }
+
+  #popup-box > h2 {
+    font-size: 45px;
+  }
+
+  #popup-box > p {
+    font-size: 35px;
+  } 
+
+  #popup-box > button {
+    font-size: 25px;
+    border-radius: 10px; 
+    background-color: #fffebd;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
