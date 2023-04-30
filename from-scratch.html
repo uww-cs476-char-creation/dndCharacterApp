@@ -25,8 +25,9 @@
     <div id="header">
         <h2>DND Character Creation</h2>
         <p>
-            Welcome to the D&D 5e character creator! Please note that any class, race, and background specific abilities will not be automatically added, 
-            so we recommend looking at the Player Handbook, other supplemental pieces of DnD media. There will be a place to fill in any abilities in Step 5.
+            Welcome to the D&D 5e character creator! Please note that any class, race, and background specific 
+            abilities will not be automatically added, so we recommend looking at the Player Handbook, other 
+            supplemental pieces of DnD media. There will be a place to fill in any abilities in Step 5.
         </p>
       </div>
       
@@ -38,65 +39,51 @@
                 <h2>Step 1: Character Info, Race, and Class</h2>
                 <div class="container">
                     <div class="row">
-
-                    <div class="col-lg">
-                        <label for="pname">Your Name:</label><br>
-                        <input type="text" id="pname" name="">
-                    </div>
-                
-                    <div class="col-lg">
-                        <label for="cname">Character Name:</label><br>
-                        <input type="text" id="cname" name="cname">
-                    </div>
-                    
-                    <div class="col-lg">
-                        <label for="align1">Alignment:</label><br>
-                            <select name="" id="align1">
-                                <option value="none">(Choose)</option>
-                                <option value="lawful">Lawful</option>
-                                <option value="neutral">Neutral</option>
-                                <option value="chaotic">Chaotic</option>
-                            </select>
-                            <select name="" id="align2">
-                                <option value="none">(Choose)</option>
-                                <option value="good">Good</option>
-                                <option value="neutral">Neutral</option>
-                                <option value="evil">Evil</option>
-                            </select><br><br>
-                    </div>
-
-                    <div class="col-lg">
-                        <label for="background">Background:</label><br>
-                        <input type="text" id="background" name=""><br><br>
-                    </div>
-
-
+                        <div class="col-lg">
+                            <label for="pname">Your Name:</label><br>
+                            <input type="text" id="pname" name="">
+                        </div>
+                        <div class="col-lg">
+                            <label for="cname">Character Name:</label><br>
+                            <input type="text" id="cname" name="cname">
+                        </div>
+                        <div class="col-lg">
+                            <label for="align1">Alignment:</label><br>
+                                <select name="align1" id="align1">
+                                    <option value="none">(Choose)</option>
+                                    <option value="lawful">Lawful</option>
+                                    <option value="neutral">Neutral</option>
+                                    <option value="chaotic">Chaotic</option>
+                                </select>
+                                <select name="align2" id="align2">
+                                    <option value="none">(Choose)</option>
+                                    <option value="good">Good</option>
+                                    <option value="neutral">Neutral</option>
+                                    <option value="evil">Evil</option>
+                                </select>
+                                <br><br>
+                        </div>
+                        <div class="col-lg">
+                            <label for="background">Background:</label><br>
+                            <input type="text" id="background" name="bg">
+                            <br><br>
+                        </div>
                     </div>
                 </div>
-
                 <div class="container">
                     <div class="row">
-
                         <div class="col-lg">
                             <label for="race">Race:</label><br>
-                            <input type="text" id="race" name=""><br><br>
+                            <input type="text" id="race" name="race"><br><br>
                         </div>
-
-                        <div class="col-lg">
-                            <label for="subrace">Variant:</label><br>
-                            <input type="text" id="subrace" name=""><br><br>
-                        </div>
-
                         <div class="col-lg">
                             <label for="level">Character Level:</label><br>
-                            <input type="number" id="strength" max=20 min=1 name=""><br><br>
+                            <input type="number" id="strength" max=20 min=1 name="charlev"><br><br>
                         </div>
-
                         <div class="col-lg">
                             <label for="class">Class:</label><br>
-                            <input type="text" id="class" name=""><br><br>
+                            <input type="text" id="class" name="class"><br><br>
                         </div>
-                    
                     </div>
                 </div>
             </div>
@@ -105,7 +92,6 @@
             
             <div id="step-2">
                 <h2>Step 2: Assigning Ability Scores</h2>
-
                 <div class="container">
                     <div class="row">
                         <div class="col-lg">
@@ -117,29 +103,27 @@
                         </div>
                     </div>
                 </div>
-
                 <div id="rolledstats"></div><br>
                     <script src = "statroller.js"></script>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm">
                                 <label for="strength">Strength (Str):</label>
-                                <input type="number" id="strength" max=20 min=1 name="">
+                                <input type="number" id="strength" max=20 min=1 name="str">
                                 <label>[+X]</label><br>
                             </div>
                             
                             <div class="col-sm">
                                 <label for="dexterity">Dexterity (Dex):</label>
-                                <input type="number" id="dexterity" max=20 min=1 name="">
+                                <input type="number" id="dexterity" max=20 min=1 name="dex">
                                 <label>[+X]</label><br>
                             </div>
 
                             <div class="col-sm">
                                 <label for="consitution">Constitution (Con):</label>
-                                <input type="number" id="constitution" max=20 min=1 name="">
+                                <input type="number" id="constitution" max=20 min=1 name="con">
                                 <label>[+X]</label><br>
                             </div>
-
                         </div>
                     </div>
 
@@ -149,30 +133,27 @@
                         <div class="row">
                             <div class="col-sm">
                                 <label for="intelligence">Intelligence (Int):</label>
-                                <input type="number" id="intelligence" max=20 min=1 name="">
+                                <input type="number" id="intelligence" max=20 min=1 name="int">
                                 <label>[+X]</label><br>
                             </div>
                             
                             <div class="col-sm">
                                 <label for="wisdom">Wisdom (Wis):</label>
-                                <input type="number" id="wisdom" max=20 min=1 name="">
+                                <input type="number" id="wisdom" max=20 min=1 name="wis">
                                 <label>[+X]</label><br>
                             </div>
 
                             <div class="col-sm">
                                 <label for="charisma">Charisma (Cha):</label>
-                                <input type="number" id="charisma" max=20 min=1 name="">
+                                <input type="number" id="charisma" max=20 min=1 name="cha">
                                 <label>[+X]</label><br>
                             </div>
 
                         </div>
                     </div>
-
                     <div class="container">
                         <div class="row">
-                            
                             <div class="col-lg"></div>
-
                             <div class="col-lg">
                                 <button type="button" id="commitstats">Update Ability Scores</button>
                             </div>
@@ -185,18 +166,18 @@
             
             <div id="step-3">
                 <h2>Step 3: Proficiency, Saving Throws and Abilities</h2>
-
                 <div class="container">
                     <div class="row">
                         <div class="col-lg"></div>
                         <div class="col-lg">
                             <label for="profbon">Proficiency Bonus:</label>
-                            <input type="number" id="profbon" max=6 min=2 name="" value=2>
+                            <input type="number" id="profbon" max=6 min=2 name="profbonus" value=2>
                         </div>
                         <div class="col-lg"></div>
                     </div>
                 </div>
-                <p>These parts will mostly be filled out automatically by using your Stats. Click the checkmark near each Saving Throw or Ability you have proficiency in.
+                <p>These parts will mostly be filled out automatically by using your Stats. Click the checkmark near each 
+                    Saving Throw or Ability you have proficiency in.
                 </p>
                 <div class="container">
                     <div class="row">
@@ -289,7 +270,6 @@
                             <label for="survival">Survival (Wis)</label>
                             <label>[+X]</label><br>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -304,25 +284,25 @@
                 <div class="row">
                     <div class="col-sm">
                         <label for="ac">Armor Class:</label>
-                        <input type="number" id="ac" name=""><br>
+                        <input type="number" id="batstats" name="ac"><br>
                     </div>
 
                     <div class="col-sm">
-                        <label for="Initiative">Initiative:</label>
-                        <input type="number" id="intial" name="">
+                        <label for="initiative">Initiative:</label>
+                        <input type="number" id="batstats" name="init">
                     </div>
                         <div class="col-sm">
                             
                             <label for="speed">Speed:</label>
-                            <input type="number" id="ac" name="">
+                            <input type="number" id="batstats" name="speed">
                         </div>
                         <div class="col-sm">
-                            <label for="mhp">Maximum Hit Points:</label>
-                            <input type="number" id="ac" name=""><br><br>
+                            <label for="mhp">Max HP:</label>
+                            <input type="number" id="batstats" name="mhp"><br><br>
                         </div>
                         <div class="col-sm">
-                            <label for="initiative">Number of Hit Dice:</label>
-                            <input type="text" id="initiative" name="">
+                            <label for="hitdice"># of Hit Dice:</label>
+                            <input type="number" id="batstats" name="hitdice">
                         </div>
                     </div>
                 </div>
@@ -333,17 +313,66 @@
             <div id="step-5">
                 <h2>Step 5: Abilities, Equipment, Spellcasting, Etc.</h2>
 
-                <p>Depending on the options you chose above, you will gain different abilities, equipment, and spells. Feel free to use this box to keep track of them.</p>
-                <textarea id="misc" name="misc" rows="10" cols="150"></textarea>
+                <p>Depending on the options you chose above, you will gain different abilities, equipment, and spells. 
+                Feel free to use this box to keep track of them.
+                </p>
+
+                <h3>Currency:</h3>
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="ac">Copper</label>
+                        <input type="number" id="curr" name="cop"><br>
+                    </div>
+    
+                    <div class="col-sm">
+                        <label for="Initiative">Silver</label>
+                        <input type="number" id="curr" name="sil">
+                    </div>
+                    <div class="col-sm">     
+                        <label for="speed">Electrum</label>
+                        <input type="number" id="curr" name="ele">
+                    </div>
+                    <div class="col-sm">
+                        <label for="mhp">Gold</label>
+                        <input type="number" id="curr" name="gold">
+                    </div>
+                    <div class="col-sm">
+                        <label for="initiative">Platinum</label>
+                        <input type="number" id="curr" name="plat">
+                    </div>
+                </div>
+
+                <br><br>
+
+                <h3>Languages and Proficiencies:</h3>
+                <textarea id="misc" name="lang" rows="10" cols="100"></textarea>
+                
+                <br><br>
+
+                <h3>Equipment:</h3>
+                <textarea id="misc" name="equip" rows="10" cols="100"></textarea>
+
+                <br><br>
+
+                <h3>Personality Traits:</h3>
+                <textarea id="misc" name="traits" rows="10" cols="100"></textarea>
+
+                <br><br>
+
+                <h3>Spells:</h3>
+                <textarea id="misc" name="spells" rows="10" cols="100"></textarea>
             </div>
+        </div>
 
             <br><br>
             
             <div id="step-6">
                 <h2>Step 6: Export</h2>
 
-                <p>You're almost done! Just click the buttons below to save different versions of your character sheet. You can use the .json file you get 
-                    to edit your character sheet later, and the .pdf file to turn this information into a good looking character sheet!</p>
+                <p>You're almost done! Just click the buttons below to save different versions of your character sheet. 
+                    You can use the .json file you get to edit your character sheet later, and the .pdf file to turn this 
+                    information into a good looking character sheet!
+                </p>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg"></div>
