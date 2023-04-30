@@ -133,9 +133,8 @@ div.OverButton {
     background-color: #290000;
     color: #fffebd;
     z-index: 2;
-    height: 280px;
+    height: 250px;
     width: 850px;
-    border-radius: 25px;
   }
 
   #popup-box > h2 {
@@ -155,3 +154,8 @@ div.OverButton {
     display: block;
     width: 200px;
   }
+
+#prefab{
+    height: 20px;
+    width: 20px;
+}
