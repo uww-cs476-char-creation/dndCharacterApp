@@ -85,3 +85,17 @@ textarea, #misc{
     background-attachment: fixed;
     padding: 0px;
   }
+
+  div.OverButton {
+    position: sticky;
+    top: 0;
+    padding: 40px;
+    font-size: 25px;
+  }
+
+  #StartOver {
+    font-size: 26px; 
+    float: left; 
+    border-radius: 10px;  
+    background-color: #fffebd;
+  }
