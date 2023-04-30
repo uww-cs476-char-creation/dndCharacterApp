@@ -3,6 +3,10 @@ h2{
     text-align:center;
 }
 
+h3{
+    text-align: center;
+}
+
 p, li, ul{
     text-align:center;
 }
@@ -21,45 +25,71 @@ p, li, ul{
 #step-1{
     background-color: RGBA(247, 206, 101, .7);
     padding: 10px;
-    color: #030303
+    color: #030303;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 #step-2{
     background-color: RGBA(147, 12, 16, .7);
     padding: 10px;
     color: #fffebd;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 #step-3{
     background-color: RGBA(247, 206, 101, .7);
     padding: 10px;
-    color: #030303
+    color: #030303;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
+/* Step 4 */
 #step-4{
     background-color: RGBA(147, 12, 16, .7);
     padding: 10px;
     color: #fffebd;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
+#batstats{
+    width: 55px;
+    height: 35px;
+}
+
+/* Step 5 */
 #step-5{
     background-color: RGBA(247, 206, 101, .7);
     padding: 10px;
-    color: #030303
+    color: #030303;
+    margin-left: 250px;
+    margin-right: 250px;
+    padding-bottom: 35px;
+}
+
+textarea, #misc{
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
+}
+
+#curr{
+    width: 55px;
+    height: 35px;
 }
 
 #step-6{
     background-color: RGBA(147, 12, 16, .7);
     padding: 10px;
     color: #fffebd;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
-/* Step 5 */
-textarea, #misc{
-    margin-right:auto;
-    margin-left:auto;
-    display:block;
-}
+
 
 /* Background */
 .parallax {
@@ -71,4 +101,30 @@ textarea, #misc{
     background-size: cover;
     background-attachment: fixed;
     padding: 0px;
+  }
+
+/* Start Over Button */
+div.OverButton {
+    position: sticky;
+    top: 0;
+    padding: 40px;
+    font-size: 25px;
+}
+
+  #StartOver {
+    font-size: 26px; 
+    float: left; 
+    border-radius: 10px;  
+    background-color: #fffebd;
+  }
+
+  #popup-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
   }
