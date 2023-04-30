@@ -141,32 +141,38 @@
       
     <div class="parallax">
         <br>
-        <form method="post" action="generate_pdf.php">
 
         <div class="OverButton">
             <button id="StartOver" name="StartOver" type="button"><b>Start Over</b></button>
         </div>
 
         <div id="popup-box">
-            <h2>Pop-up Box</h2>
-            <p>This is some sample text in the pop-up box.</p>
-            <button id="close-btn">Close</button>
+            <h2>Do you wish to continue?</h2>
+            <p>All progress will be lost</p>
+            <button id="yes-btn">Yes</button>
+            <button id="no-btn">No</button>
         </div>
 
         <script>
             const popupBtn = document.getElementById('StartOver');
             const popupBox = document.getElementById('popup-box');
-            const closeBtn = document.getElementById('close-btn');
-
+            const noBtn = document.getElementById('no-btn');
+            const yesBtn = document.getElementById('yes-btn');
+          
             popupBtn.addEventListener('click', () => {
-            popupBox.style.display = 'block';
+              popupBox.style.display = 'block';
             });
-
-            closeBtn.addEventListener('click', () => {
-            popupBox.style.display = 'none';
+          
+            noBtn.addEventListener('click', () => {
+              popupBox.style.display = 'none';
             });
-        </script>
+          
+            yesBtn.addEventListener('click', () => {
+              window.location.href = 'index.html';
+            });
+          </script>
 
+        <form method="post" action="generate_pdf.php">
         <div>
 
             <div id="step-1">
