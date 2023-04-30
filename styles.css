@@ -148,3 +148,8 @@ div.OverButton {
     margin-right: auto;
     display: block;
   }
+
+#prefab{
+    height: 20px;
+    width: 20px;
+}
