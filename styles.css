@@ -103,16 +103,28 @@ textarea, #misc{
     padding: 0px;
   }
 
-  div.OverButton {
+/* Start Over Button */
+div.OverButton {
     position: sticky;
     top: 0;
     padding: 40px;
     font-size: 25px;
-  }
+}
 
   #StartOver {
     font-size: 26px; 
     float: left; 
     border-radius: 10px;  
     background-color: #fffebd;
+  }
+
+  #popup-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
   }

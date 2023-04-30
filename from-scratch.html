@@ -39,6 +39,26 @@
             <button id="StartOver" name="StartOver" type="button"><b>Start Over</b></button>
         </div>
 
+        <div id="popup-box">
+            <h2>Pop-up Box</h2>
+            <p>This is some sample text in the pop-up box.</p>
+            <button id="close-btn">Close</button>
+        </div>
+
+        <script>
+            const popupBtn = document.getElementById('StartOver');
+            const popupBox = document.getElementById('popup-box');
+            const closeBtn = document.getElementById('close-btn');
+
+            popupBtn.addEventListener('click', () => {
+            popupBox.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', () => {
+            popupBox.style.display = 'none';
+            });
+        </script>
+
         <div>
 
             <div id="step-1">
