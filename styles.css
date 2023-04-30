@@ -74,6 +74,11 @@ textarea, #misc{
     margin-right:auto;
     margin-left:auto;
     display:block;
+    background-color: #fffebd;
+}
+
+input[type="text"], input[type="number"] {
+    background-color: #fffebd;
 }
 
 #curr{
@@ -128,7 +133,7 @@ div.OverButton {
     background-color: #290000;
     color: #fffebd;
     z-index: 2;
-    height: 250px;
+    height: 280px;
     width: 850px;
   }
 
