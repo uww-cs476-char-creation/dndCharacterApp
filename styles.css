@@ -21,37 +21,50 @@ p, li, ul{
 #step-1{
     background-color: RGBA(247, 206, 101, .7);
     padding: 10px;
-    color: #030303
+    color: #030303;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 #step-2{
     background-color: RGBA(147, 12, 16, .7);
     padding: 10px;
     color: #fffebd;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 #step-3{
     background-color: RGBA(247, 206, 101, .7);
     padding: 10px;
-    color: #030303
+    color: #030303;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 #step-4{
     background-color: RGBA(147, 12, 16, .7);
     padding: 10px;
     color: #fffebd;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 #step-5{
     background-color: RGBA(247, 206, 101, .7);
     padding: 10px;
-    color: #030303
+    color: #030303;
+    margin-left: 250px;
+    margin-right: 250px;
+    padding-bottom: 35px;
 }
 
 #step-6{
     background-color: RGBA(147, 12, 16, .7);
     padding: 10px;
     color: #fffebd;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 /* Step 5 */
