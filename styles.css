@@ -74,6 +74,11 @@ textarea, #misc{
     margin-right:auto;
     margin-left:auto;
     display:block;
+    background-color: #fffebd;
+}
+
+input[type="text"], input[type="number"] {
+    background-color: #fffebd;
 }
 
 #curr{
