@@ -20,6 +20,114 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>DND Project</title>
+    <script>
+        function exportJSON() {
+            var pname = document.getElementById("pname").value;
+            var cname = document.getElementById("cname").value;
+            var align1 = document.getElementById("align1").value;
+            var alaign2 = document.getElementById("align2").value;
+            var background = document.getElementById("background").value;
+            var race = document.getElementById("race").value;
+            var subrace = document.getElementById("subrace").value;
+            var level = document.getElementById("level").value;
+            var c = document.getElementById("class").value;
+            var strength = document.getElementById("strength").value;
+            var dexterity = document.getElementById("dexterity").value;
+            var constitution = document.getElementById("constitution").value;
+            var intelligence = document.getElementById("intelligence").value;
+            var wisdom = document.getElementById("wisdom").value;
+            var charisma = document.getElementById("charisma").value;
+            var profbon = document.getElementById("profbon").value;
+            var strsave = document.getElementById("strsave").value;
+            var dexsave = document.getElementById("dexsave").value;
+            var consave = document.getElementById("consave").value;
+            var intsave = document.getElementById("intsave").value;
+            var wissave = document.getElementById("wissave").value;
+            var chasave = document.getElementById("chasave").value;
+            var acrobatics = document.getElementById("acrobatics").value;
+            var animalhandling = document.getElementById("animalhandling").value;
+            var arcana = document.getElementById("arcana").value;
+            var athletics = document.getElementById("athletics").value;
+            var deception = document.getElementById("deception").value;
+            var history = document.getElementById("history").value;
+            var insight = document.getElementById("insight").value;
+            var intimidation = document.getElementById("intimidation").value;
+            var investigation = document.getElementById("investigation").value;
+            var medicine = document.getElementById("medicine").value;
+            var nature = document.getElementById("nature").value;
+            var perception = document.getElementById("perception").value;
+            var performance = document.getElementById("performance").value;
+            var persuasion = document.getElementById("persuasion").value;
+            var religion = document.getElementById("religion").value;
+            var sleight = document.getElementById("sleight").value;
+            var stealth = document.getElementById("stealth").value;
+            var survival = document.getElementById("survival").value;
+            var ac = document.getElementById("ac").value;
+            var intial = document.getElementById("intial").value;
+            var spd = document.getElementById("spd").value;
+            var mhp = document.getElementById("mhp").value;
+            var nhd = document.getElementById("nhd").value;
+            var misc = document.getElementById("misc").value;
+
+
+
+            var data = {
+                "pname":name,
+                "cname":cname,
+                "align1":align1,
+                "align2":alaign2,
+                "background":background,
+                "race":race,
+                "subrace":subrace,
+                "level":level,
+                "class":c,
+                "strength":strength,
+                "dexterity":dexterity,
+                "constitution":constitution,
+                "intelligence":intelligence,
+                "wisdom":wisdom,
+                "charisma":charisma,
+                "profbon":profbon,
+                "strsave":strsave,
+                "dexsave":dexsave,
+                "consave":consave,
+                "intsave":intsave,
+                "wissave":wissave,
+                "chasave":chasave,
+                "acrobatics":acrobatics,
+                "animalhandling":animalhandling,
+                "arcana":arcana,
+                "athletics":athletics,
+                "deception":deception,
+                "history":history,
+                "insight":insight,
+                "intimidation":intimidation,
+                "investigation":investigation,
+                "medicine":medicine,
+                "nature":nature,
+                "perception":perception,
+                "performance":performance,
+                "persuasion":persuasion,
+                "religion":religion,
+                "sleight":sleight,
+                "stealth":stealth,
+                "survival":survival,
+                "ac":ac,
+                "intial":intial,
+                "spd":spd,
+                "mhp":mhp,
+                "nhd":nhd,
+                "misc":misc,
+            };
+            var json = JSON.stringify(data);
+            var downloadLink = document.createElement("a");
+        downloadLink.href = "data:text/plain;charset=utf-8," + encodeURIComponent(json);
+        downloadLink.download = "data.json";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        };
+    </script>
 </head>
 <body>
     <div id="header">
@@ -73,7 +181,7 @@
                     <div class="row">
                         <div class="col-lg">
                             <label for="pname">Your Name:</label><br>
-                            <input type="text" id="pname" name="">
+                            <input type="text" id="pname" name="pname">
                         </div>
                         <div class="col-lg">
                             <label for="cname">Character Name:</label><br>
@@ -110,7 +218,7 @@
                         </div>
                         <div class="col-lg">
                             <label for="level">Character Level:</label><br>
-                            <input type="number" id="strength" max=20 min=1 name="charlev"><br><br>
+                            <input type="number" id="level" max=20 min=1 name="charlev"><br><br>
                         </div>
                         <div class="col-lg">
                             <label for="class">Class:</label><br>
@@ -326,15 +434,15 @@
                         <div class="col-sm">
                             
                             <label for="speed">Speed:</label>
-                            <input type="number" id="batstats" name="speed">
+                            <input type="number" id="spd" name="speed">
                         </div>
                         <div class="col-sm">
                             <label for="mhp">Max HP:</label>
-                            <input type="number" id="batstats" name="mhp"><br><br>
+                            <input type="number" id="mhp" name="mhp"><br><br>
                         </div>
                         <div class="col-sm">
-                            <label for="hitdice"># of Hit Dice:</label>
-                            <input type="number" id="batstats" name="hitdice">
+                            <label for="nhd">Number of Hit Dice:</label>
+                            <input type="text" id="nhd" name="">
                         </div>
                     </div>
                 </div>
@@ -410,13 +518,15 @@
                             <div class="col-lg"></div>
                             <div class="col-lg">
                                 <input type="submit" name="submit" value="Export">
+                        
                             </div>
                         </div>
                     </div>
                 <br>
             </div>
     </div>
-    </form>
+    <button id="exportjson" onclick="exportJSON()">Export as JSON</button><br><br>
+</form>
        
 
 </body>
