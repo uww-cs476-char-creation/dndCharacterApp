@@ -77,7 +77,7 @@ textarea, #misc{
     background-color: #fffebd;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], select, button {
     background-color: #fffebd;
 }
 
