@@ -172,6 +172,8 @@ div.OverButton {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
+    height: 450px;
+    width: 500px;
   }
   
   .icon-link:hover {
