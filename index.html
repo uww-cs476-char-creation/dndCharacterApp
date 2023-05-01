@@ -44,8 +44,43 @@
         </div>
         
         <div class="col-lg">
-          <a href="#.html"><img class="img-fluid" src="images/import-tab.png"></a>
+          <label for="pdf-input"><img class="img-fluid" src="images/import-tab.png"></label>
+          <input type="file" id="pdf-input" style="display: none;">
         </div>
+        
+        <script>
+          // add event listener to panel to open file input
+          document.querySelector('.col-lg').addEventListener('click', function() {
+            document.querySelector('#pdf-input').click();
+          });
+          
+          // add event listener to file input to handle file selection
+          document.querySelector('#pdf-input').addEventListener('change', function() {
+            var file = this.files[0];
+            
+            // check if selected file is a PDF
+            if (file.type === 'application/pdf') {
+              var reader = new FileReader();
+              
+              // read the PDF file
+              reader.onload = function() {
+                var pdfData = new Uint8Array(reader.result);
+                
+                // parse the PDF file using TCPDF
+                // replace this with your own parsing code
+                var pdf = new TCPDF();
+                pdf.loadFromBytes(pdfData);
+                var text = pdf.getTextContent();
+                console.log(text);
+              };
+              
+              reader.readAsArrayBuffer(file);
+            } else {
+              alert('Please select a PDF file');
+            }
+          });
+        </script>
+        
       </div>
     </div>
   </div>
