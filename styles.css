@@ -17,18 +17,17 @@ body{
 
 #tab-container{
     margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 /* Header */
 #header{
     background-color: #290000;
     color: #fffebd;
-    padding: 10px;
+    padding: 40px;
 }
 
 #header > h2{
-    font-size: 40px;
+    font-size: 70px;
 }
 
 #step-1{
