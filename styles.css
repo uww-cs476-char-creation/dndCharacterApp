@@ -177,7 +177,7 @@ div.OverButton {
   }
   
   .icon-link:hover {
-    transform: scale(1.05);
+    transform: scale(.95);
   }
   
   .icon-container {
@@ -192,4 +192,8 @@ div.OverButton {
     color: #fffebd;
     margin-left: 250px;
     margin-right: 250px;
+}
+
+.img-fluid:hover {
+    transform: scale(.95);
 }
