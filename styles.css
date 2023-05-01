@@ -183,3 +183,11 @@ div.OverButton {
     margin-bottom: 10px;
     color: #333;
   }
+
+#import-character{
+    background-color: RGBA(147, 12, 16, .7);
+    padding: 10px;
+    color: #fffebd;
+    margin-left: 250px;
+    margin-right: 250px;
+}
