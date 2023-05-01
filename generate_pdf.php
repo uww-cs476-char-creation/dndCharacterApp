@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $level = $_POST['level'];
 
     // Replace placeholders in the HTML with the user input
-    $html = str_replace('{{name}}', $name, $html);
+    $html1 = str_replace('{{name}}', $name, $html);
     $html = str_replace('{{race}}', $race, $html);
     $html = str_replace('{{class}}', $class, $html);
     $html = str_replace('{{level}}', $level, $html);
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $pdf->AddPage();
 
     // Write the HTML content to the PDF
-    $pdf->writeHTML($html);
+    $pdf->writeHTML($html1);
 
     // Output the generated PDF to the browser
     $pdf->Output('character-sheet.pdf', 'I');
