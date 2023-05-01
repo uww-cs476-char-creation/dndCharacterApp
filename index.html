@@ -43,14 +43,14 @@
           <a href = "prefab.html"><img class="img-fluid" src = "images/prefab-tab.png"></a>
         </div>
         
-        <div class="col-lg">
+        <div class="col-lg" id="import">
           <label for="pdf-input"><img class="img-fluid" src="images/import-tab.png"></label>
           <input type="file" id="pdf-input" style="display: none;">
         </div>
         
         <script>
           // add event listener to panel to open file input
-          document.querySelector('.col-lg').addEventListener('click', function() {
+          document.querySelector('#import').addEventListener('click', function() {
             document.querySelector('#pdf-input').click();
           });
           
