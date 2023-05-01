@@ -116,14 +116,14 @@ div.OverButton {
     font-size: 25px;
 }
 
-  #StartOver {
+#StartOver {
     font-size: 26px; 
     float: left; 
     border-radius: 10px;  
     background-color: #fffebd;
-  }
+}
 
-  #popup-box {
+#popup-box {
     display: none;
     position: fixed;
     top: 50%;
@@ -135,17 +135,17 @@ div.OverButton {
     z-index: 2;
     height: 280px;
     width: 850px;
-  }
+}
 
-  #popup-box > h2 {
+#popup-box > h2 {
     font-size: 45px;
-  }
+}
 
-  #popup-box > p {
+#popup-box > p {
     font-size: 35px;
-  } 
+} 
 
-  #popup-box > button {
+#popup-box > button {
     font-size: 25px;
     border-radius: 10px; 
     background-color: #fffebd;
@@ -153,9 +153,24 @@ div.OverButton {
     margin-right: auto;
     display: block;
     width: 200px;
-  }
-
-#prefab{
-    height: 200px;
-    width: 200px;
 }
+
+.icon-link {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .icon-link:hover {
+    transform: scale(1.05);
+  }
+  
+  .icon-container {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+  }
