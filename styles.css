@@ -19,6 +19,10 @@ body{
     margin-top: 50px;
 }
 
+input[type="text"], input[type="number"], input[type="submit"], select, button {
+    background-color: #fffebd;
+}
+
 /* Header */
 #header{
     background-color: #290000;
@@ -82,10 +86,6 @@ textarea, #misc{
     margin-right:auto;
     margin-left:auto;
     display:block;
-    background-color: #fffebd;
-}
-
-input[type="text"], input[type="number"], select, button {
     background-color: #fffebd;
 }
 
@@ -185,3 +185,11 @@ div.OverButton {
     margin-bottom: 10px;
     color: #333;
   }
+
+#import-character{
+    background-color: RGBA(147, 12, 16, .7);
+    padding: 10px;
+    color: #fffebd;
+    margin-left: 250px;
+    margin-right: 250px;
+}
