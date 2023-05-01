@@ -10,6 +10,7 @@ if (isset($_FILES['pdf-file'])) {
   $pdf->setSourceFile($pdfPath);
 
   //fields to be populated from the PDF file
+  $playername = $formFields['Player Name']['value'];
   $charname = $formFields['Character Name']['value'];
   $alignment = $formFields['Alignment']['value'];
   $background = $formFields['Background']['value'];
@@ -19,6 +20,7 @@ if (isset($_FILES['pdf-file'])) {
 
   // populate the remaining web form fields with the extracted data
   echo '<script>';
+  echo 'document.getElementById("pname").value = "'.$playername.'";';
   echo 'document.getElementById("cname").value = "'.$charname.'";';
   echo 'document.getElementById("align1").value = "'.substr($alignment, 0, 7).'";'; // separate lawful/neutral/chaotic from good/neutral/evil
   echo 'document.getElementById("align2").value = "'.substr($alignment, 8).'";'; // separate lawful/neutral/chaotic from good/neutral/evil
