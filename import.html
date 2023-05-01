@@ -52,22 +52,18 @@
             
             // check if selected file is a PDF
             if (file.type === 'application/pdf') {
-              // update label text with selected file name
-              var label = document.querySelector(' #import-character label');
-              label.innerHTML = file.name;
-              
-              // submit form with selected file
-              var formData = new FormData();
-              formData.append('pdf-file', file);
-              var xhr = new XMLHttpRequest();
-              xhr.open('POST', 'import.php', true);
-              xhr.onload = function() {
-                console.log('Form submitted');
-              };
-              xhr.send(formData);
-            } else {
-              alert('Please select a PDF file');
-            }
+                // update label text with selected file name
+                var label = document.querySelector(' #import-character label');
+                label.innerHTML = file.name;
+                
+                // submit form with selected file
+                var formData = new FormData();
+                formData.append('pdf-file', file);
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'import.php', true);
+                } else {
+                alert('Please select a PDF file');
+                }
           });
         </script>
 
