@@ -1,5 +1,5 @@
 <?php
-require_once('tcpdf/tcpdf.php');
+require_once('t/home/projects/cs476/dndCharacterApp/tcpdf_6_3_2/tcpdf/tcpdf.php');
 
 if (isset($_FILES['pdf-file'])) {
   // set the path to the uploaded PDF file
