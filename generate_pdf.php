@@ -37,6 +37,7 @@ if (isset($_POST['submit'])) {
 
     $pdf->Cell(0, 10, 'Step 2: Ability Scores', 0, 1, 'C');
     $pdf->Ln();
+    $pdf->SetFont('helvetica', '', 14);
     $pdf->Cell(50, 10, 'Strength:', 0, 0, 'R');
     $pdf->Cell(0, 10, isset($_POST['strsave']) ? 'Yes' : 'No', 0, 1, 'L');
     $pdf->Cell(50, 10, 'Dexterity:', 0, 0, 'R');
@@ -52,6 +53,7 @@ if (isset($_POST['submit'])) {
 
     $pdf->Cell(0, 10, 'Step 3: Proficiency, Saving Throws and Abilities', 0, 1, 'C');
     $pdf->Ln();
+    $pdf->SetFont('helvetica', '', 14);
     $pdf->Cell(50, 10, 'Proficiency Bonus:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['profbonus'], 0, 1, 'L');
 
@@ -111,6 +113,7 @@ if (isset($_POST['submit'])) {
 
     $pdf->Cell(0, 10, 'Step 4: Battle Stats', 0, 1, 'C');
     $pdf->Ln();
+    $pdf->SetFont('helvetica', '', 14);
     $pdf->Cell(50, 10, 'Armor Class:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['ac'], 0, 1, 'L');
     $pdf->Cell(50, 10, 'Initiative:', 0, 0, 'R');
@@ -124,6 +127,7 @@ if (isset($_POST['submit'])) {
 
     $pdf->Cell(0, 10, 'Step 5: Abilities, Equipment, Spellcasting, Etc.', 0, 1, 'C');
     $pdf->Ln();
+    $pdf->SetFont('helvetica', '', 14);
     $pdf->Cell(50, 10, 'Currency:', 0, 0, 'R');
     $pdf->Cell(50, 10, 'Copper:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['cop'], 0, 1, 'L');
