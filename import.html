@@ -67,43 +67,33 @@
           });
         </script> -->
         <script>
-            // add event listener to file input to get file name
+            // add event listener to panel to open file input
+            document.querySelector('#import-character').addEventListener('click', function() {
+              document.querySelector('#pdf-input').click();
+            });
+            
+            // add event listener to file input to get file name and send file to PHP
             document.querySelector('#pdf-input').addEventListener('change', function() {
               var file = this.files[0];
-                
-              // submit form with selected file
-              var formData = new FormData();
-              formData.append('pdf-file', file);
-              var xhr = new XMLHttpRequest();
-              xhr.open('POST', 'import.php', true);
-              xhr.onload = function() {
-                if (xhr.status === 200) {
-                  // populate the remaining web form fields with the extracted data
-                  var formFields = JSON.parse(xhr.responseText);
-                  document.getElementById("pname").value = formFields['Player Name']['value'];
-                  document.getElementById("cname").value = formFields['Character Name']['value'];
-                  document.getElementById("align1").value = formFields['Alignment']['value'].substr(0, 7); // separate lawful/neutral/chaotic from good/neutral/evil
-                  document.getElementById("align2").value = formFields['Alignment']['value'].substr(8); // separate lawful/neutral/chaotic from good/neutral/evil
-                  document.getElementById("background").value = formFields['Background']['value'];
-                  document.getElementById("race").value = formFields['Race']['value'];
-                  document.getElementById("level").value = formFields['Character Level']['value'];
-                  document.getElementById("class").value = formFields['Class']['value'];
-                } else {
-                  alert('There was an error processing your file.');
-                }
-              };
-              xhr.send(formData);
+              
+              // check if selected file is a PDF
+              if (file.type === 'application/pdf') {
+                // submit form with selected file
+                var formData = new FormData();
+                formData.append('pdf-file', file);
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'import.php', true);
+                xhr.onreadystatechange = function() {
+                  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    // do something if PHP script returns a response
+                  }
+                };
+                xhr.send(formData);
+              } else {
+                alert('Please select a PDF file');
+              }
             });
           </script>
-<<<<<<< HEAD
-=======
-        </script>
->>>>>>> parent of 5ae8122 (Merge branch 'main' of https://github.com/uww-cs476-char-creation/dndCharacterApp)
-=======
-        </script>
->>>>>>> parent of 5ae8122 (Merge branch 'main' of https://github.com/uww-cs476-char-creation/dndCharacterApp)
-=======
->>>>>>> parent of ab3092f (Update import.html)
 
             <div class="OverButton">
                 <button id="StartOver" name="StartOver" type="button"><b>Start Over</b></button>

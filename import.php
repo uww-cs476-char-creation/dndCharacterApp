@@ -1,34 +1,39 @@
 <?php
-require_once('t/home/projects/cs476/dndCharacterApp/tcpdf_6_3_2/tcpdf/tcpdf.php');
 
-if (isset($_FILES['pdf-file'])) {
-  // set the path to the uploaded PDF file
-  $pdfPath = $_FILES['pdf-file']['tmp_name'];
+require 'vendor/autoload.php'; // require the autoload.php file of the TCPDF library
 
-  // create a new TCPDF instance
-  $pdf = new TCPDF();
-  $pdf->setSourceFile($pdfPath);
+// Create a new instance of the PDF parser
+$parser = new \Smalot\PdfParser\Parser();
 
-  //fields to be populated from the PDF file
-  $playername = $formFields['Player Name']['value'];
-  $charname = $formFields['Character Name']['value'];
-  $alignment = $formFields['Alignment']['value'];
-  $background = $formFields['Background']['value'];
-  $race = $formFields['Race']['value'];
-  $charlevel = $formFields['Character Level']['value'];
-  $class = $formFields['Class']['value'];
+// Parse the PDF file and get the data
+$pdf = $parser->parseFile('path/to/your/pdf/file.pdf');
+$text = $pdf->getText();
 
-  // populate the remaining web form fields with the extracted data
-  echo '<script>';
-  echo 'document.getElementById("pname").value = "'.$playername.'";';
-  echo 'document.getElementById("cname").value = "'.$charname.'";';
-  echo 'document.getElementById("align1").value = "'.substr($alignment, 0, 7).'";'; // separate lawful/neutral/chaotic from good/neutral/evil
-  echo 'document.getElementById("align2").value = "'.substr($alignment, 8).'";'; // separate lawful/neutral/chaotic from good/neutral/evil
-  echo 'document.getElementById("background").value = "'.$background.'";';
-  echo 'document.getElementById("race").value = "'.$race.'";';
-  echo 'document.getElementById("level").value = "'.$charlevel.'";';
-  echo 'document.getElementById("class").value = "'.$class.'";';
-  echo '</script>';
-}
+// Extract the data you need from the text
+// In this example, we're assuming that the data is stored in a specific format and using regular expressions to extract it
+$regex = '/Player Name:\s*(.*)\s*Character Name:\s*(.*)\s*Alignment:\s*(.*)\s*Background:\s*(.*)\s*Race:\s*(.*)\s*Character Level:\s*(.*)\s*Class:\s*(.*)/s';
+preg_match($regex, $text, $matches);
+
+// Store the extracted data in a PHP array
+$data = array(
+  'player_name' => trim($matches[1]),
+  'character_name' => trim($matches[2]),
+  'alignment' => trim($matches[3]),
+  'background' => trim($matches[4]),
+  'race' => trim($matches[5]),
+  'level' => trim($matches[6]),
+  'class' => trim($matches[7])
+);
+
+// Pass the data to your HTML file
+// You can use PHP's built-in function file_get_contents() to read the HTML file into a string
+$html = file_get_contents('path/to/your/html/file.html');
+
+// Use PHP's built-in function strtr() to replace placeholders in the HTML with the actual data
+$html = strtr($html, $data);
+
+// Output the HTML to the browser
+echo $html;
+
 ?>
 
