@@ -238,44 +238,6 @@ if (isset($_POST['submit'])) {
         <td width="100" align="center"><b>Character Level</b></td>
         <td width="100" align="center"><b>Class</b></td>
      </tr>
-     <tr>
-      <td width="30" align="center">1.</td>
-      <td width="140" rowspan="6" class="second">XXXX<br />XXXX<br />XXXX<br />XXXX<br />XXXX<br />XXXX<br />XXXX<br />XXXX</td>
-      <td width="140">XXXX<br />XXXX</td>
-      <td width="80">XXXX<br />XXXX</td>
-      <td width="80">XXXX</td>
-      <td align="center" width="45">XXXX<br />XXXX</td>
-     </tr>
-     <tr>
-      <td width="30" align="center" rowspan="3">2.</td>
-      <td width="140" rowspan="3">XXXX<br />XXXX</td>
-      <td width="80">XXXX<br />XXXX</td>
-      <td width="80">XXXX<br />XXXX</td>
-      <td align="center" width="45">XXXX<br />XXXX</td>
-     </tr>
-     <tr>
-      <td width="80">XXXX<br />XXXX<br />XXXX<br />XXXX</td>
-      <td width="80">XXXX<br />XXXX</td>
-      <td align="center" width="45">XXXX<br />XXXX</td>
-     </tr>
-     <tr>
-      <td width="80" rowspan="2" >XXXX<br />XXXX<br />XXXX<br />XXXX<br />XXXX<br />XXXX<br />XXXX<br />XXXX</td>
-      <td width="80">XXXX<br />XXXX</td>
-      <td align="center" width="45">XXXX<br />XXXX</td>
-     </tr>
-     <tr>
-      <td width="30" align="center">3.</td>
-      <td width="140">XXXX<br />XXXX</td>
-      <td width="80">XXXX<br />XXXX</td>
-      <td align="center" width="45">XXXX<br />XXXX</td>
-     </tr>
-     <tr bgcolor="#FFFF80">
-      <td width="30" align="center">4.</td>
-      <td width="140" bgcolor="#00CC00" color="#FFFF00">XXXX<br />XXXX</td>
-      <td width="80">XXXX<br />XXXX</td>
-      <td width="80">XXXX<br />XXXX</td>
-      <td align="center" width="45">XXXX<br />XXXX</td>
-     </tr>
     </table>
     EOF;
     
