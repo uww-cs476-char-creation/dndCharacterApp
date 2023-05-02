@@ -230,12 +230,13 @@ if (isset($_POST['submit'])) {
     
     <table class="first" cellpadding="4" cellspacing="6">
      <tr>
-      <td width="30" align="center"><b>No.</b></td>
-      <td width="140" align="center" bgcolor="#FFFF00"><b>XXXX</b></td>
-      <td width="140" align="center"><b>XXXX</b></td>
-      <td width="80" align="center"> <b>XXXX</b></td>
-      <td width="80" align="center"><b>XXXX</b></td>
-      <td width="45" align="center"><b>XXXX</b></td>
+        <td width="100" align="center"><b>Player Name</b></td>
+        <td width="100" align="center" bgcolor="#FFFF00"><b>Character Name</b></td>
+        <td width="100" align="center"><b>Alignment</b></td>
+        <td width="100" align="center"> <b>Background</b></td>
+        <td width="100" align="center"><b>Race</b></td>
+        <td width="100" align="center"><b>Character Level</b></td>
+        <td width="100" align="center"><b>Class</b></td>
      </tr>
      <tr>
       <td width="30" align="center">1.</td>
