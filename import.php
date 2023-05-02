@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php'; // require the autoload.php file of the TCPDF library
+require '/home/projects/cs476/dndCharacterApp/tcpdf_6_3_2/tcpdf/tcpdf.php'; // require the autoload.php file of the TCPDF library
 
 // Create a new instance of the PDF parser
 $parser = new \Smalot\PdfParser\Parser();
