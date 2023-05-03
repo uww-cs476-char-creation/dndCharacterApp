@@ -175,6 +175,22 @@ div.OverButton {
     height: 450px;
     width: 500px;
   }
+
+  #rogue {
+    background-image: url('images/button-drow-rogue.png');
+  }
+
+  #cleric {
+    background-image: url('images/button-dwarf-ceric.png');
+  }
+
+  #fighter {
+    background-image: url('images/button-high-elf-fighter.png');
+  }
+
+  #paladin {
+    background-image: url('images/button-human-paladinn.png');
+  }
   
   .icon-link:hover {
     transform: scale(.95);
