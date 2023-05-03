@@ -224,10 +224,10 @@ if (isset($_POST['submit'])) {
         <td width="100" align="center"><b>Class</b></td>
      </tr>
      <tr>
-        <td width="100" align="center"><b>Player Name</b></td>
-        <td width="100" align="center" bgcolor="#FFFF00"><b>Character Name</b></td>
+        <td width="100" align="center">Player Name</td>
+        <td width="100" align="center"><b>Character Name</b></td>
         <td width="100" align="center"><b>Alignment</b></td>
-        <td width="100" align="center"> <b>Background</b></td>
+        <td width="100" align="center"><b>Background</b></td>
         <td width="100" align="center"><b>Race</b></td>
         <td width="100" align="center"><b>Character Level</b></td>
         <td width="100" align="center"><b>Class</b></td>
