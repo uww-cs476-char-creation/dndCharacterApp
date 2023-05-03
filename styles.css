@@ -19,6 +19,11 @@ body{
     margin-top: 50px;
 }
 
+.col-lg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 input[type="text"], input[type="number"], input[type="submit"], select, button {
     background-color: #fffebd;
 }
