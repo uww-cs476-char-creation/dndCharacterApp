@@ -3,8 +3,8 @@
 require_once('/home/projects/cs476/dndCharacterApp/tcpdf_6_3_2/tcpdf/tcpdf.php');
 
 // Check if the PDF file was uploaded
-if (isset($_FILES['pdfFile'])) {
-  $file = $_FILES['pdfFile']['tmp_name'];
+if (isset($_FILES['character-sheet'])) {
+  $file = $_FILES['character-sheet']['tmp_name'];
 
   // Create a new TCPDF object
   $pdf = new TCPDF();

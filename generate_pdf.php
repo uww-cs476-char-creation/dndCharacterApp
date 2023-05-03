@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
     $pdf->Ln();
     $pdf->SetFont('helvetica', '', 14);
     $pdf->Cell(50, 10, 'Strength:', 0, 0, 'R');
-    $pdf->Cell(0, 10, isset($_POST['strsave']) ? 'Yes' : 'No', 0, 1, 'L');
+    $pdf->Cell(0, 10, $_POST['str'], 0, 1, 'L');
     $pdf->Cell(50, 10, 'Dexterity:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['dex'], 0, 1, 'L');
     $pdf->Cell(50, 10, 'Constitution:', 0, 0, 'R');
