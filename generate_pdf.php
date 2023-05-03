@@ -223,6 +223,15 @@ if (isset($_POST['submit'])) {
         <td width="100" align="center"><b>Character Level</b></td>
         <td width="100" align="center"><b>Class</b></td>
      </tr>
+     <tr>
+     <td width="100" align="center">Player Name</td>
+     <td width="100" align="center">Character Name</td>
+     <td width="100" align="center">Alignment</td>
+     <td width="100" align="center">Background</td>
+     <td width="100" align="center">Race</td>
+     <td width="100" align="center">Character Level</td>
+     <td width="100" align="center">Class</td>
+  </tr>
     </table>
     EOF;
     
