@@ -44,8 +44,32 @@
         </div>
         
         <div class="col-lg">
-          <a href = "import.html"><img class="img-fluid" src = "images/import-tab.png"></a>
+          <img class="img-fluid" src="images/import-tab.png" onclick="document.getElementById('pdfFile').click();">
+          <input type="file" id="pdfFile" style="display:none;" accept=".pdf" onchange="uploadPDF(this)">
         </div>
+        
+        <script>
+          function uploadPDF(input) {
+            if (input.files && input.files[0]) {
+              var formData = new FormData();
+              formData.append("pdfFile", input.files[0]);
+              var xhr = new XMLHttpRequest();
+              xhr.open("POST", "import.php", true);
+              xhr.onload = function() {
+                if (xhr.status === 200) {
+                  console.log("File uploaded successfully.");
+                } else {
+                  console.error("File upload failed.");
+                }
+              };
+              xhr.send(formData);
+            }
+          }
+        </script>
+        
+        
+        
+        
         
       </div>
     </div>

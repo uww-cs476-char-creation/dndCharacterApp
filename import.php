@@ -1,39 +1,65 @@
 <?php
 
-require '/home/projects/cs476/dndCharacterApp/tcpdf_6_3_2/tcpdf/tcpdf.php'; // require the autoload.php file of the TCPDF library
+require_once('/home/projects/cs476/dndCharacterApp/tcpdf_6_3_2/tcpdf/tcpdf.php');
 
-// Create a new instance of the PDF parser
-$parser = new \Smalot\PdfParser\Parser();
+// Check if the form has been submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-// Parse the PDF file and get the data
-$pdf = $parser->parseFile('path/to/your/pdf/file.pdf');
-$text = $pdf->getText();
+    // Check if a PDF file was uploaded
+    if (isset($_FILES['pdfFile']) && $_FILES['pdfFile']['error'] === UPLOAD_ERR_OK) {
 
-// Extract the data you need from the text
-// In this example, we're assuming that the data is stored in a specific format and using regular expressions to extract it
-$regex = '/Player Name:\s*(.*)\s*Character Name:\s*(.*)\s*Alignment:\s*(.*)\s*Background:\s*(.*)\s*Race:\s*(.*)\s*Character Level:\s*(.*)\s*Class:\s*(.*)/s';
-preg_match($regex, $text, $matches);
+        // Create a new TCPDF instance
+        $pdf = new TCPDF();
 
-// Store the extracted data in a PHP array
-$data = array(
-  'player_name' => trim($matches[1]),
-  'character_name' => trim($matches[2]),
-  'alignment' => trim($matches[3]),
-  'background' => trim($matches[4]),
-  'race' => trim($matches[5]),
-  'level' => trim($matches[6]),
-  'class' => trim($matches[7])
-);
+        // Get the contents of the uploaded PDF file
+        $pdfData = file_get_contents($_FILES['pdfFile']['tmp_name']);
 
-// Pass the data to your HTML file
-// You can use PHP's built-in function file_get_contents() to read the HTML file into a string
-$html = file_get_contents('path/to/your/html/file.html');
+        // Extract the text from the PDF file
+        $text = $pdf->getTextFromPdfData($pdfData);
 
-// Use PHP's built-in function strtr() to replace placeholders in the HTML with the actual data
-$html = strtr($html, $data);
+        // Parse the text to extract the relevant data
+        $playerName = extractValue($text, 'Player Name:');
+        $characterName = extractValue($text, 'Character Name:');
+        $alignment = extractValue($text, 'Alignment:');
+        $background = extractValue($text, 'Background:');
+        $race = extractValue($text, 'Race:');
+        $level = extractValue($text, 'Level:');
+        $class = extractValue($text, 'Class:');
 
-// Output the HTML to the browser
-echo $html;
+        // Load the import.html file into a string variable
+        $html = file_get_contents('import.html');
+
+        // Replace the placeholders in the HTML string with the extracted data
+        $html = str_replace('{player_name}', $playerName, $html);
+        $html = str_replace('{character_name}', $characterName, $html);
+        $html = str_replace('{alignment}', $alignment, $html);
+        $html = str_replace('{background}', $background, $html);
+        $html = str_replace('{race}', $race, $html);
+        $html = str_replace('{level}', $level, $html);
+        $html = str_replace('{class}', $class, $html);
+
+        // Output the modified HTML string
+        echo $html;
+
+    } else {
+        // Handle errors uploading the file
+        echo "Error uploading PDF file.";
+    }
+}
+
+/**
+ * Extracts a value from a text string by searching for a keyword and returning the text after it.
+ */
+function extractValue($text, $keyword) {
+    $startPos = strpos($text, $keyword);
+    if ($startPos !== false) {
+        $startPos += strlen($keyword);
+        $endPos = strpos($text, "\n", $startPos);
+        if ($endPos !== false) {
+            return trim(substr($text, $startPos, $endPos - $startPos));
+        }
+    }
+    return "";
+}
 
 ?>
-
