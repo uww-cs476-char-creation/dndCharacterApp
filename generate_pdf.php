@@ -224,7 +224,7 @@ if (isset($_POST['submit'])) {
         <td width="100" align="center"><b>Class</b></td>
      </tr>
      <tr>
-        <td width="100" align="center">Player Name</td>
+        <td width="100" align="center">$_POST['pname']</td>
         <td width="100" align="center">Character Name</td>
         <td width="100" align="center">Alignment</td>
         <td width="100" align="center">Background</td>
