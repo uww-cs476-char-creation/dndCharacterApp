@@ -31,7 +31,7 @@
         </p>
       </div>
       
-    <div class="parallax">
+      <div class="parallax">
         <br>
 
         <div class="OverButton">
@@ -98,7 +98,7 @@
                         </div>
                         <div class="col-lg">
                             <label for="background">Background:</label><br>
-                            <input type="text" id="background" name="bg" value="">
+                            <input type="text" id="background" name="bg" value="Sage">
                             <br><br>
                         </div>
                     </div>
@@ -107,11 +107,11 @@
                     <div class="row">
                         <div class="col-lg">
                             <label for="race">Race:</label><br>
-                            <input type="text" id="race" name="race" value="High Elf"><br><br>
+                            <input type="text" id="race" name="race" value="High-Elf"><br><br>
                         </div>
                         <div class="col-lg">
                             <label for="level">Character Level:</label><br>
-                            <input type="number" id="level" max=20 min=1 name="charlev" value=""><br><br>
+                            <input type="number" id="level" max=20 min=1 name="charlev" value="1"><br><br>
                         </div>
                         <div class="col-lg">
                             <label for="class">Class:</label><br>
@@ -122,7 +122,7 @@
             </div>
 
             <br><br>
-            
+
             <div id="step-2">
                 <h2>Step 2: Assigning Ability Scores</h2>
                 <div class="container">
@@ -143,19 +143,19 @@
                             <div class="col-sm">
                                 <label for="strength">Strength (Str):</label>
                                 <input type="number" id="strength" max=20 min=1 name="str">
-                                <label>[+X]</label><br>
+                                <label id="s-mod"></label><br>
                             </div>
                             
                             <div class="col-sm">
                                 <label for="dexterity">Dexterity (Dex):</label>
                                 <input type="number" id="dexterity" max=20 min=1 name="dex">
-                                <label>[+X]</label><br>
+                                <label id="d-mod"></label><br>
                             </div>
 
                             <div class="col-sm">
                                 <label for="consitution">Constitution (Con):</label>
                                 <input type="number" id="constitution" max=20 min=1 name="con">
-                                <label>[+X]</label><br>
+                                <label id="c-mod"></label><br>
                             </div>
                         </div>
                     </div>
@@ -167,19 +167,19 @@
                             <div class="col-sm">
                                 <label for="intelligence">Intelligence (Int):</label>
                                 <input type="number" id="intelligence" max=20 min=1 name="int">
-                                <label>[+X]</label><br>
+                                <label id="i-mod"></label><br>
                             </div>
                             
                             <div class="col-sm">
                                 <label for="wisdom">Wisdom (Wis):</label>
                                 <input type="number" id="wisdom" max=20 min=1 name="wis">
-                                <label>[+X]</label><br>
+                                <label id="w-mod"></label><br>
                             </div>
 
                             <div class="col-sm">
                                 <label for="charisma">Charisma (Cha):</label>
                                 <input type="number" id="charisma" max=20 min=1 name="cha">
-                                <label>[+X]</label><br>
+                                <label id="ch-mod"></label><br>
                             </div>
 
                         </div>
@@ -194,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-
+                <script src = "modifiers.js"></script>
                 <br><br>
             
             <div id="step-3">
@@ -216,24 +216,24 @@
                     <div class="row">
                         <div class="col-lg">
                             <h3>Saving Throws</h3>
-                            <input type="checkbox" id="strsave" value="">
+                            <input type="checkbox" id="strsave" value="" checked>
                             <label for="strsave">Strength</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="dexsave" value="">
                             <label for="dexsave">Dexterity</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="consave" value="">
+                            <br>
+                            <input type="checkbox" id="consave" value="" checked>
                             <label for="consave">Constitution</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="intsave" value="">
                             <label for="intsave">Intelligence</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="wissave" value="">
                             <label for="wissave">Wisdom</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="chasave" value="">
                             <label for="chasave">Charisma</label>
-                            <label>[+X]</label><br>
+                            <br>
                         </div>
 
                         <div class="col-lg"></div>
@@ -242,66 +242,66 @@
                             <h3>Abilities</h3>
                             <input type="checkbox" id="acrobatics" value="">
                             <label for="acrobatics">Acrobatics (Str)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="animalhandling" value="">
                             <label for="animalhandling">Animal Handling (Wis)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="arcana" value="">
+                            <br>
+                            <input type="checkbox" id="arcana" value="" checked>
                             <label for="arcana">Arcana (Int)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="athletics" value="">
+                            <br>
+                            <input type="checkbox" id="athletics" value="" checked>
                             <label for="athletics">Athletics (Str)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="deception" value="">
                             <label for="deception">Deception (Cha)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="history" value="">
+                            <br>
+                            <input type="checkbox" id="history" value="" checked>
                             <label for="history">History (Int)</label>
-                            <label>[+X]</label><br>
+                            <br>
                         </div>
 
                         <div class="col-lg">
                             <br><br>
-                            <input type="checkbox" id="insight" value="">
+                            <input type="checkbox" id="insight" value="" checked>
                             <label for="insight">Insight (Wis)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="intimidation" value="">
                             <label for="intimidation">Intimidation (Cha)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="investigation" value="">
                             <label for="investigation">Investigation (Int)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="medicine" value="">
                             <label for="medicine">Medicine (Wis)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="nature" value="">
                             <label for="nature">Nature (Int)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="perception" value="">
+                            <br>
+                            <input type="checkbox" id="perception" value="" checked>
                             <label for="perception">Perception (Wis)</label>
-                            <label>[+X]</label><br>
+                            <br>
                         </div>
 
                         <div class="col-lg">
                             <br><br>
                             <input type="checkbox" id="performance" value="">
                             <label for="performance">Performance (Cha)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="persuasion" value="">
                             <label for="persuasion">Persuasion (Cha)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="religion" value="">
                             <label for="religion">Religion (Int)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="sleight" value="">
                             <label for="sleight">Sleight of Hand (Dex)</label>
-                            <label>[+X]</label><br>
+                            <br>
                             <input type="checkbox" id="stealth" value="">
                             <label for="stealth">Stealth (Dex)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="survival" value="">
+                            <br>
+                            <input type="checkbox" id="survival" value="" checked>
                             <label for="survival">Survival (Wis)</label>
-                            <label>[+X]</label><br>
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -317,7 +317,7 @@
                 <div class="row">
                     <div class="col-sm">
                         <label for="ac">Armor Class:</label>
-                        <input type="number" id="batstats" name="ac"><br>
+                        <input type="number" id="batstats" name="ac" value="17"><br>
                     </div>
 
                     <div class="col-sm">
@@ -327,15 +327,16 @@
                         <div class="col-sm">
                             
                             <label for="speed">Speed:</label>
-                            <input type="number" id="batstats" name="speed">
+                            <input type="number" id="batstats" name="speed" value="30">
+                            <label for="speed">ft.</label>
                         </div>
                         <div class="col-sm">
                             <label for="mhp">Max HP:</label>
-                            <input type="number" id="batstats" name="mhp"><br><br>
+                            <input type="number" id="batstats" name="mhp" value="18"><br><br>
                         </div>
                         <div class="col-sm">
-                            <label for="nhd"># of Hit Dice:</label>
-                            <input type="number" id="batstats" name="hitdice">
+                            <label for="nhd">Hit Dice:</label>
+                            <input type="text" id="batstats" name="hitdice" value="2d10">
                         </div>
                     </div>
                 </div>
@@ -359,7 +360,7 @@
     
                     <div class="col-sm">
                         <label for="silver">Silver</label>
-                        <input type="number" id="curr" name="sil">
+                        <input type="number" id="curr" name="sil" value="8">
                     </div>
                     <div class="col-sm">     
                         <label for="electrum">Electrum</label>
@@ -367,7 +368,7 @@
                     </div>
                     <div class="col-sm">
                         <label for="gold">Gold</label>
-                        <input type="number" id="curr" name="gold">
+                        <input type="number" id="curr" name="gold" value="64">
                     </div>
                     <div class="col-sm">
                         <label for="platinum">Platinum</label>
@@ -378,17 +379,17 @@
                 <br><br>
 
                 <h3>Languages and Proficiencies:</h3>
-                <textarea id="misc" name="lang" rows="10" cols="100"></textarea>
+                <textarea id="misc" name="lang" rows="10" cols="100">Common, Dwarvish, Draconic, Elvish, Halfling</textarea>
                 
                 <br><br>
 
                 <h3>Equipment:</h3>
-                <textarea id="misc" name="equip" rows="10" cols="100"></textarea>
+                <textarea id="misc" name="equip" rows="10" cols="100">Rapier, studded leather, dart (20), shield, scholar's pack, fishing tackle, book on fighting techniques, spellbook</textarea>
 
                 <br><br>
 
                 <h3>Personality Traits:</h3>
-                <textarea id="misc" name="traits" rows="10" cols="100"></textarea>
+                <textarea id="misc" name="traits" rows="10" cols="100">You use polysyllabic words that convey the impression of great erudition.</textarea>
 
                 <br><br>
 
