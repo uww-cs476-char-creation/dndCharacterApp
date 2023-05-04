@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
     // Abilities
     $pdf->Cell(0, 10, 'Abilities:', 0, 1, 'C');
     $pdf->Cell(50, 10, 'Acrobatics:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['acrobatics'] ? 'Yes' : 'No', 0, 1, 'L');
+    $pdf->Cell(0, 10, isset($_POST['acrobatics']) ? 'Yes' : 'No', 0, 1, 'L');
     $pdf->Cell(50, 10, 'Animal Handling:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['animalhandling'] ? 'Yes' : 'No', 0, 1, 'L');
     $pdf->Cell(50, 10, 'Arcana:', 0, 0, 'R');
