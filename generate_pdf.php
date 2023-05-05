@@ -24,8 +24,8 @@ if (isset($_POST['submit'])) {
     $pdf->SetFont('helvetica', '', 14);
     $pdf->Cell(50, 10, 'Player Name:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['pname'], 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Character Name:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['cname'], 0, 1, 'L');
+    $pdf->Cell(50, 10, 'Character Name:', 0, 3, 'R');
+    $pdf->Cell(0, 10, $_POST['cname'], 0, 4, 'L');
     $pdf->Cell(50, 10, 'Race:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['race'], 0, 1, 'L');
     $pdf->Cell(50, 10, 'Class:', 0, 0, 'R');
@@ -57,7 +57,6 @@ if (isset($_POST['submit'])) {
     $pdf->Cell(50, 10, 'Proficiency Bonus:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['profbonus'], 0, 1, 'L');
 
-    $pdf->Cell(0, 10, 'Saving Throws and Abilities', 0, 1, 'C');
     // Saving Throws
     $pdf->Cell(50, 10, 'Saving Throws:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['save'], 0, 1, 'L');
@@ -74,7 +73,7 @@ if (isset($_POST['submit'])) {
     // $pdf->Cell(50, 10, 'Charisma:', 0, 0, 'R');
     // $pdf->Cell(0, 10, $_POST['chasave'] ? 'Yes' : 'No', 0, 1, 'L');
     // Abilities
-    $pdf->Cell(0, 10, 'Abilities:', 0, 1, 'C');
+    $pdf->Cell(50, 10, 'Abilities:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['abil'], 0, 1, 'L');
     // $pdf->Cell(50, 10, 'Acrobatics:', 0, 0, 'R');
     //  if (isset($_POST['acrobatics'])){
