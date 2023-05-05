@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $pdf->SetFont('helvetica', '', 14);
     $pdf->Cell(50, 10, 'Player Name:', 0, 0, 'R');
     $pdf->Cell(100, 10, $_POST['pname'], 0, 0, 'L');
-    $pdf->Cell(50, 10, 'Character Name:', 0, 0, 'R');
+    $pdf->Cell(50, 10, 'Character Name:', 0, 0, 'L');
     $pdf->Cell(100, 10, $_POST['cname'], 0, 1, 'L');
     $pdf->Cell(50, 10, 'Race:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['race'], 0, 1, 'L');
