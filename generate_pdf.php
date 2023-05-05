@@ -59,62 +59,64 @@ if (isset($_POST['submit'])) {
 
     $pdf->Cell(0, 10, 'Saving Throws and Abilities', 0, 1, 'C');
     // Saving Throws
-    $pdf->Cell(0, 10, 'Saving Throws', 0, 1, 'C');
-    $pdf->Cell(50, 10, 'Strength:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['strsave'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Dexterity:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['dexsave'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Constitution:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['consave'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Intelligence:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['intsave'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Wisdom:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['wissave'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Charisma:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['chasave'] ? 'Yes' : 'No', 0, 1, 'L');
+    $pdf->Cell(50, 10, 'Saving Throws:', 0, 0, 'R');
+    $pdf->Cell(0, 10, $_POST['save'], 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Strength:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['strsave'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Dexterity:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['dexsave'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Constitution:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['consave'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Intelligence:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['intsave'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Wisdom:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['wissave'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Charisma:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['chasave'] ? 'Yes' : 'No', 0, 1, 'L');
     // Abilities
     $pdf->Cell(0, 10, 'Abilities:', 0, 1, 'C');
-    $pdf->Cell(50, 10, 'Acrobatics:', 0, 0, 'R');
-     if (isset($_POST['acrobatics'])){
-         $pdf->Cell(0, 10, 'Yes', 0, 1, 'L');
-     }
-     else {
-        $pdf->Cell(0, 10, 'No', 0, 1, 'L');
-    }
-    $pdf->Cell(50, 10, 'Animal Handling:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['animalhandling'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Arcana:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['arcana'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Athletics:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['athletics'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Deception:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['deception'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'History:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['history'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Insight:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['insight'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Intimidation:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['intimidation'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Investigation:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['investigation'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Medicine:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['medicine'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Nature:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['nature'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Perception:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['perception'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Performace:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['performance'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Persuasion:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['persuasion'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Religion:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['religion'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Slight of Hand:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['slight'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Stealth:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['stealth'] ? 'Yes' : 'No', 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Survival:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['survival'] ? 'Yes' : 'No', 0, 1, 'L');
+    $pdf->Cell(0, 10, $_POST['abil'], 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Acrobatics:', 0, 0, 'R');
+    //  if (isset($_POST['acrobatics'])){
+    //      $pdf->Cell(0, 10, 'Yes', 0, 1, 'L');
+    //  }
+    //  else {
+    //     $pdf->Cell(0, 10, 'No', 0, 1, 'L');
+    // }
+    // $pdf->Cell(50, 10, 'Animal Handling:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['animalhandling'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Arcana:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['arcana'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Athletics:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['athletics'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Deception:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['deception'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'History:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['history'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Insight:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['insight'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Intimidation:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['intimidation'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Investigation:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['investigation'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Medicine:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['medicine'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Nature:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['nature'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Perception:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['perception'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Performace:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['performance'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Persuasion:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['persuasion'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Religion:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['religion'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Slight of Hand:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['slight'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Stealth:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['stealth'] ? 'Yes' : 'No', 0, 1, 'L');
+    // $pdf->Cell(50, 10, 'Survival:', 0, 0, 'R');
+    // $pdf->Cell(0, 10, $_POST['survival'] ? 'Yes' : 'No', 0, 1, 'L');
 
     $pdf->Cell(0, 10, 'Step 4: Battle Stats', 0, 1, 'C');
     $pdf->Ln();
