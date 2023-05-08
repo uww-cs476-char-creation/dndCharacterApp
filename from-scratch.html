@@ -83,13 +83,13 @@
                         <div class="col-lg">
                             <label for="align1">Alignment:</label><br>
                                 <select name="align1" id="align1" value="">
-                                    <option value="None">(Choose)</option>
+                                    <option value="">(Choose)</option>
                                     <option value="Lawful">Lawful</option>
                                     <option value="Neutral">Neutral</option>
                                     <option value="Chaotic">Chaotic</option>
                                 </select>
                                 <select name="align2" id="align2" value="">
-                                    <option value="None">(Choose)</option>
+                                    <option value="">(Choose)</option>
                                     <option value="Good">Good</option>
                                     <option value="Neutral">Neutral</option>
                                     <option value="Evil">Evil</option>
@@ -188,6 +188,7 @@
                         <div class="row">
                             <div class="col-lg"></div>
                             <div class="col-lg">
+                                <br>
                                 <button type="button" id="commitstats">Update Ability Scores</button>
                             </div>
                             <div class="col-lg"></div>
@@ -198,7 +199,7 @@
                 <br><br>
             
             <div id="step-3">
-                <h2>Step 3: Proficiency, Saving Throws and Abilities</h2>
+                <h2>Step 3: Proficiency, Saving Throws, and Skills</h2>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg"></div>
@@ -209,24 +210,25 @@
                         <div class="col-lg"></div>
                     </div>
                 </div>
-                <p><b>Saving Throw Options</b>: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma
-                </p>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg">
+                            <br>
                             <h3>Saving Throws</h3>
-                            <textarea id="misc" name="save" rows="2" cols="100"></textarea>
+                            <p><b>Saving Throw Options</b>: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma
+                            </p>
+                            <textarea id="misc" name="save" rows="2" cols="80"></textarea>
                             
                             <br><br>
-
-                            <p><b>Strength Abilities</b>: Acrobatics & Athletics</p>
-                            <p><b>Wisdom Abilities</b>: Animal Handling, Insight, Medicine, Perception, & Survival</p>
-                            <p><b>Intelligence Abilities</b>: Arcana, History, Investigation, Nature, & Religion</p>
-                            <p><b>Charisma Abilities</b>: Deception, Intimidation, Performance, & Persuasion</p>
-                            <p><b>Dexterity Abilities</b>: Sleight of Hand, & Stealth </p>
                             
-                            <h3>Abilities</h3>
-                            <textarea id="misc" name="abil" rows="2" cols="100"></textarea>
+                            <h3>Skills</h3>
+                            <br>
+                            <p><b>Strength Skills</b>: Acrobatics & Athletics</p>
+                            <p><b>Wisdom Skills</b>: Animal Handling, Insight, Medicine, Perception, & Survival</p>
+                            <p><b>Intelligence Skills</b>: Arcana, History, Investigation, Nature, & Religion</p>
+                            <p><b>Charisma Skills</b>: Deception, Intimidation, Performance, & Persuasion</p>
+                            <p><b>Dexterity Skills</b>: Sleight of Hand, & Stealth </p>
+                            <textarea id="misc" name="abil" rows="2" cols="80"></textarea>
                             <br>
                         </div>
                     </div>
@@ -304,23 +306,23 @@
 
                 <br><br>
 
-                <h3>Languages and Proficiencies:</h3>
-                <textarea id="misc" name="lang" rows="7" cols="100"></textarea>
+                <h3>Languages and Proficiencies (MAX 80 CHARACTERS):</h3>
+                <textarea id="misc" name="lang" rows="2" cols="80"></textarea>
                 
                 <br><br>
 
-                <h3>Equipment:</h3>
-                <textarea id="misc" name="equip" rows="7" cols="100"></textarea>
+                <h3>Equipment (MAX 80 CHARACTERS):</h3>
+                <textarea id="misc" name="equip" rows="2" cols="80"></textarea>
 
                 <br><br>
 
-                <h3>Personality Traits:</h3>
-                <textarea id="misc" name="traits" rows="7" cols="100"></textarea>
+                <h3>Personality Traits (MAX 80 CHARACTERS):</h3>
+                <textarea id="misc" name="traits" rows="2" cols="80"></textarea>
 
                 <br><br>
 
-                <h3>Spells:</h3>
-                <textarea id="misc" name="spells" rows="7" cols="100"></textarea>
+                <h3>Spells (MAX 80 CHARACTERS):</h3>
+                <textarea id="misc" name="spells" rows="2" cols="80"></textarea>
             </div>
         </div>
 
@@ -333,10 +335,18 @@
                 </p>
                     <div class="container">
                         <div class="row">
+                            <!-- Adding numerous columns to get the spacing right -->
+                            <div class="col-lg"></div>
+                            <div class="col-lg"></div>
+                            <div class="col-lg"></div>
                             <div class="col-lg"></div>
                             <div class="col-lg">
-                                <input type="submit" name="submit" value="Export">
+                                <input type="submit" name="submit" value="Export" style="width: 200px;">
                             </div>
+                            <div class="col-lg"></div>
+                            <div class="col-lg"></div>
+                            <div class="col-lg"></div>
+                            <div class="col-lg"></div>
                         </div>
                     </div>
                 <br>
