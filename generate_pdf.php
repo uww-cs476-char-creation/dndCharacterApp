@@ -103,7 +103,6 @@ if (isset($_POST['submit'])) {
     
     $pdf->Ln();
     $pdf->Ln();
-    $pdf->Ln();
 
     $pdf->Cell(0, 10, 'Step 5 continued on next page', 0, 1, 'C');
 
