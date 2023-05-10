@@ -1,14 +1,27 @@
 /* General */
+@font-face {
+    font-family: Blackwood Castle;
+    src: url(blackwood-castle.ttf);
+}
+
+@font-face {
+    font-family: Immortal;
+    src: url(immortal.ttf);
+}
+
 h2{
     text-align:center;
+    font-family: Blackwood Castle;
 }
 
 h3{
     text-align: center;
+    font-family: Blackwood Forest;
 }
 
 p, li, ul{
     text-align:center;
+    font-family: Immortal;
 }
 
 body{
