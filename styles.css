@@ -34,6 +34,11 @@ body{
 
 input[type="text"], input[type="number"], input[type="submit"], select, button {
     background-color: #fffebd;
+    font-family: Immortal;
+}
+
+label{
+    font-family: Immortal;
 }
 
 /* Header */
@@ -115,6 +120,10 @@ textarea, #misc{
     margin-right: 250px;
 }
 
+#step-6, h3{
+    font-family: Immortal;
+}
+
 
 
 /* Background */
@@ -142,6 +151,7 @@ div.OverButton {
     float: left; 
     border-radius: 10px;  
     background-color: #fffebd;
+    font-family: Immortal;
 }
 
 #popup-box {
@@ -165,6 +175,7 @@ div.OverButton {
 
 #popup-box > p {
     font-size: 35px;
+    font-family: Immortal;
 } 
 
 #popup-box > button {
@@ -175,6 +186,7 @@ div.OverButton {
     margin-right: auto;
     display: block;
     width: 200px;
+    font-family: Immortal;
 }
 
 .icon-link {
