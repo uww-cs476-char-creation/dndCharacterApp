@@ -66,355 +66,292 @@
           </script>
 
 <form method="post" action="generate_pdf.php">
-        <div>
+    <div>
 
-            <div id="step-1">
-                <h2>Step 1: Character Info, Race, and Class</h2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg">
-                            <label for="pname">Player Name:</label><br>
-                            <input type="text" id="pname" name="pname" value="">
-                        </div>
-                        <div class="col-lg">
-                            <label for="cname">Character Name:</label><br>
-                            <input type="text" id="cname" name="cname" value="">
-                        </div>
-                        <div class="col-lg">
-                            <label for="align1">Alignment:</label><br>
-                                <select name="align1" id="align1" value="">
-                                    <option value="none">(Choose)</option>
-                                    <option value="lawful">Lawful</option>
-                                    <option value="neutral">Neutral</option>
-                                    <option value="chaotic">Chaotic</option>
-                                </select>
-                                <select name="align2" id="align2" value="">
-                                    <option value="none">(Choose)</option>
-                                    <option value="good">Good</option>
-                                    <option value="neutral">Neutral</option>
-                                    <option value="evil">Evil</option>
-                                </select>
-                                <br><br>
-                        </div>
-                        <div class="col-lg">
-                            <label for="background">Background:</label><br>
-                            <input type="text" id="background" name="bg" value="">
-                            <br><br>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg">
-                            <label for="race">Race:</label><br>
-                            <input type="text" id="race" name="race" value="Human"><br><br>
-                        </div>
-                        <div class="col-lg">
-                            <label for="level">Character Level:</label><br>
-                            <input type="number" id="level" max=20 min=1 name="charlev" value=""><br><br>
-                        </div>
-                        <div class="col-lg">
-                            <label for="class">Class:</label><br>
-                            <input type="text" id="class" name="class" value="Paladin"><br><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br><br>
-            
-            <div id="step-2">
-                <h2>Step 2: Assigning Ability Scores</h2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg">
-                            <button type="button" id="rollstats">Roll 6 random stat numbers</button>
-                        </div>
-                        <div class="col-lg"></div>
-                        <div class="col-lg">
-                                <button type="button" id="sarray">Get Standard Array</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="rolledstats"></div><br>
-                    <script src = "statroller.js"></script>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
-                                <label for="strength">Strength (Str):</label>
-                                <input type="number" id="strength" max=20 min=1 name="str">
-                                <label>[+X]</label><br>
-                            </div>
-                            
-                            <div class="col-sm">
-                                <label for="dexterity">Dexterity (Dex):</label>
-                                <input type="number" id="dexterity" max=20 min=1 name="dex">
-                                <label>[+X]</label><br>
-                            </div>
-
-                            <div class="col-sm">
-                                <label for="consitution">Constitution (Con):</label>
-                                <input type="number" id="constitution" max=20 min=1 name="con">
-                                <label>[+X]</label><br>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br>
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
-                                <label for="intelligence">Intelligence (Int):</label>
-                                <input type="number" id="intelligence" max=20 min=1 name="int">
-                                <label>[+X]</label><br>
-                            </div>
-                            
-                            <div class="col-sm">
-                                <label for="wisdom">Wisdom (Wis):</label>
-                                <input type="number" id="wisdom" max=20 min=1 name="wis">
-                                <label>[+X]</label><br>
-                            </div>
-
-                            <div class="col-sm">
-                                <label for="charisma">Charisma (Cha):</label>
-                                <input type="number" id="charisma" max=20 min=1 name="cha">
-                                <label>[+X]</label><br>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg"></div>
-                            <div class="col-lg">
-                                <button type="button" id="commitstats">Update Ability Scores</button>
-                            </div>
-                            <div class="col-lg"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <br><br>
-            
-            <div id="step-3">
-                <h2>Step 3: Proficiency, Saving Throws and Abilities</h2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg"></div>
-                        <div class="col-lg">
-                            <label for="profbon">Proficiency Bonus:</label>
-                            <input type="number" id="profbon" max=6 min=2 name="profbonus" value=2>
-                        </div>
-                        <div class="col-lg"></div>
-                    </div>
-                </div>
-                <p>These parts will mostly be filled out automatically by using your Stats. Click the checkmark near each 
-                    Saving Throw or Ability you have proficiency in.
-                </p>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg">
-                            <h3>Saving Throws</h3>
-                            <input type="checkbox" id="strsave" value="">
-                            <label for="strsave">Strength</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="dexsave" value="">
-                            <label for="dexsave">Dexterity</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="consave" value="">
-                            <label for="consave">Constitution</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="intsave" value="">
-                            <label for="intsave">Intelligence</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="wissave" value="">
-                            <label for="wissave">Wisdom</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="chasave" value="">
-                            <label for="chasave">Charisma</label>
-                            <label>[+X]</label><br>
-                        </div>
-
-                        <div class="col-lg"></div>
-                        
-                        <div class="col-lg">
-                            <h3>Abilities</h3>
-                            <input type="checkbox" id="acrobatics" value="">
-                            <label for="acrobatics">Acrobatics (Str)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="animalhandling" value="">
-                            <label for="animalhandling">Animal Handling (Wis)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="arcana" value="">
-                            <label for="arcana">Arcana (Int)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="athletics" value="">
-                            <label for="athletics">Athletics (Str)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="deception" value="">
-                            <label for="deception">Deception (Cha)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="history" value="">
-                            <label for="history">History (Int)</label>
-                            <label>[+X]</label><br>
-                        </div>
-
-                        <div class="col-lg">
-                            <br><br>
-                            <input type="checkbox" id="insight" value="">
-                            <label for="insight">Insight (Wis)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="intimidation" value="">
-                            <label for="intimidation">Intimidation (Cha)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="investigation" value="">
-                            <label for="investigation">Investigation (Int)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="medicine" value="">
-                            <label for="medicine">Medicine (Wis)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="nature" value="">
-                            <label for="nature">Nature (Int)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="perception" value="">
-                            <label for="perception">Perception (Wis)</label>
-                            <label>[+X]</label><br>
-                        </div>
-
-                        <div class="col-lg">
-                            <br><br>
-                            <input type="checkbox" id="performance" value="">
-                            <label for="performance">Performance (Cha)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="persuasion" value="">
-                            <label for="persuasion">Persuasion (Cha)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="religion" value="">
-                            <label for="religion">Religion (Int)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="sleight" value="">
-                            <label for="sleight">Sleight of Hand (Dex)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="stealth" value="">
-                            <label for="stealth">Stealth (Dex)</label>
-                            <label>[+X]</label><br>
-                            <input type="checkbox" id="survival" value="">
-                            <label for="survival">Survival (Wis)</label>
-                            <label>[+X]</label><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <br><br>
-
-            <div id="step-4">
-                <h2>Step 4: Battle Stats</h2>
-
+        <div id="step-1">
+            <h2>Step 1: Character Info, Race, and Class</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm">
-                        <label for="ac">Armor Class:</label>
-                        <input type="number" id="batstats" name="ac"><br>
+                    <div class="col-lg">
+                        <label for="pname">Player Name:</label><br>
+                        <input type="text" id="pname" name="pname" value="">
                     </div>
-
-                    <div class="col-sm">
-                        <label for="initiative">Initiative:</label>
-                        <input type="number" id="batstats" name="init">
+                    <div class="col-lg">
+                        <label for="cname">Character Name:</label><br>
+                        <input type="text" id="cname" name="cname" value="">
                     </div>
-                        <div class="col-sm">
-                            
-                            <label for="speed">Speed:</label>
-                            <input type="number" id="batstats" name="speed">
-                        </div>
-                        <div class="col-sm">
-                            <label for="mhp">Max HP:</label>
-                            <input type="number" id="batstats" name="mhp"><br><br>
-                        </div>
-                        <div class="col-sm">
-                            <label for="nhd"># of Hit Dice:</label>
-                            <input type="number" id="batstats" name="hitdice">
-                        </div>
+                    <div class="col-lg">
+                        <label for="align1">Alignment:</label><br>
+                            <select name="align1" id="align1" value="">
+                                <option value="">(Choose)</option>
+                                <option value="Lawful">Lawful</option>
+                                <option value="Neutral">Neutral</option>
+                                <option value="Chaotic">Chaotic</option>
+                            </select>
+                            <select name="align2" id="align2" value="">
+                                <option value="">(Choose)</option>
+                                <option value="Good">Good</option>
+                                <option value="Neutral">Neutral</option>
+                                <option value="Evil">Evil</option>
+                            </select>
+                            <br><br>
+                    </div>
+                    <div class="col-lg">
+                        <label for="background">Background:</label><br>
+                        <input type="text" id="background" name="bg" value="Noble">
+                        <br><br>
                     </div>
                 </div>
             </div>
-
-            <br><br>
-
-            <div id="step-5">
-                <h2>Step 5: Abilities, Equipment, Spellcasting, Etc.</h2>
-
-                <p>Depending on the options you chose above, you will gain different abilities, equipment, and spells. 
-                Feel free to use this box to keep track of them.
-                </p>
-
-                <h3>Currency:</h3>
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm">
-                        <label for="copper">Copper</label>
-                        <input type="number" id="curr" name="cop"><br>
+                    <div class="col-lg">
+                        <label for="race">Race:</label><br>
+                        <input type="text" id="race" name="race" value="Human"><br><br>
                     </div>
-    
-                    <div class="col-sm">
-                        <label for="silver">Silver</label>
-                        <input type="number" id="curr" name="sil">
+                    <div class="col-lg">
+                        <label for="level">Character Level:</label><br>
+                        <input type="number" id="level" max=20 min=1 name="charlev" value=""><br><br>
                     </div>
-                    <div class="col-sm">     
-                        <label for="electrum">Electrum</label>
-                        <input type="number" id="curr" name="ele">
-                    </div>
-                    <div class="col-sm">
-                        <label for="gold">Gold</label>
-                        <input type="number" id="curr" name="gold">
-                    </div>
-                    <div class="col-sm">
-                        <label for="platinum">Platinum</label>
-                        <input type="number" id="curr" name="plat">
+                    <div class="col-lg">
+                        <label for="class">Class:</label><br>
+                        <input type="text" id="class" name="class" value="Paladin"><br><br>
                     </div>
                 </div>
-
-                <br><br>
-
-                <h3>Languages and Proficiencies:</h3>
-                <textarea id="misc" name="lang" rows="10" cols="100"></textarea>
-                
-                <br><br>
-
-                <h3>Equipment:</h3>
-                <textarea id="misc" name="equip" rows="10" cols="100"></textarea>
-
-                <br><br>
-
-                <h3>Personality Traits:</h3>
-                <textarea id="misc" name="traits" rows="10" cols="100"></textarea>
-
-                <br><br>
-
-                <h3>Spells:</h3>
-                <textarea id="misc" name="spells" rows="10" cols="100"></textarea>
             </div>
         </div>
 
-            <br><br>
-            
-            <div id="step-6">
-                <h2>Step 6: Export</h2>
+        <br><br>
 
-                <p>You're almost done! Just click the buttons below to export your character.
-                </p>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg"></div>
-                            <div class="col-lg">
-                                <input type="submit" name="submit" value="Export">
-                            </div>
+        <div id="step-2">
+            <h2>Step 2: Assigning Ability Scores</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg">
+                        <button type="button" id="rollstats">Roll 6 random stat numbers</button>
+                    </div>
+                    <div class="col-lg"></div>
+                    <div class="col-lg">
+                            <button type="button" id="sarray">Get Standard Array</button>
+                    </div>
+                </div>
+            </div>
+            <div id="rolledstats"></div><br>
+                <script src = "statroller.js"></script>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <label for="strength">Strength (Str):</label>
+                            <input type="number" id="strength" max=20 min=1 name="str" value="16">
+                            <label id="s-mod"></label><br>
+                        </div>
+                        
+                        <div class="col-sm">
+                            <label for="dexterity">Dexterity (Dex):</label>
+                            <input type="number" id="dexterity" max=20 min=1 name="dex" value="9">
+                            <label id="d-mod"></label><br>
+                        </div>
+
+                        <div class="col-sm">
+                            <label for="consitution">Constitution (Con):</label>
+                            <input type="number" id="constitution" max=20 min=1 name="con" value="14">
+                            <label id="c-mod"></label><br>
                         </div>
                     </div>
+                </div>
+
                 <br>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <label for="intelligence">Intelligence (Int):</label>
+                            <input type="number" id="intelligence" max=20 min=1 name="int" value="11">
+                            <label id="i-mod"></label><br>
+                        </div>
+                        
+                        <div class="col-sm">
+                            <label for="wisdom">Wisdom (Wis):</label>
+                            <input type="number" id="wisdom" max=20 min=1 name="wis" value="14">
+                            <label id="w-mod"></label><br>
+                        </div>
+
+                        <div class="col-sm">
+                            <label for="charisma">Charisma (Cha):</label>
+                            <input type="number" id="charisma" max=20 min=1 name="cha" value="16">
+                            <label id="ch-mod"></label><br>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg"></div>
+                        <div class="col-lg">
+                            <br>
+                            <button type="button" id="commitstats">Update Ability Scores</button>
+                        </div>
+                        <div class="col-lg"></div>
+                    </div>
+                </div>
             </div>
+            <script src = "modifiers.js"></script>
+            <br><br>
+        
+        <div id="step-3">
+            <h2>Step 3: Proficiency, Saving Throws, and Skills</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg"></div>
+                    <div class="col-lg">
+                        <label for="profbon">Proficiency Bonus:</label>
+                        <input type="number" id="profbon" max=6 min=2 name="profbonus" value=2>
+                    </div>
+                    <div class="col-lg"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg">
+                        <br>
+                        <h3>Saving Throws</h3>
+                        <p><b>Saving Throw Options</b>: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma
+                        </p>
+                        <textarea id="misc" name="save" rows="2" cols="80">Wis +4, Cha +5</textarea>
+                        
+                        <br><br>
+                        
+                        <h3>Skills</h3>
+                            <br>
+                            <p><b>Strength Skills</b>: Acrobatics & Athletics</p>
+                            <p><b>Wisdom Skills</b>: Animal Handling, Insight, Medicine, Perception, & Survival</p>
+                            <p><b>Intelligence Skills</b>: Arcana, History, Investigation, Nature, & Religion</p>
+                            <p><b>Charisma Skills</b>: Deception, Intimidation, Performance, & Persuasion</p>
+                            <p><b>Dexterity Skills</b>: Sleight of Hand, & Stealth </p>
+                        <textarea id="misc" name="abil" rows="2" cols="80">History +3, Medicine +4, Persuasion +5, Religion +3</textarea>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br>
+
+        <div id="step-4">
+            <h2>Step 4: Battle Stats</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <label for="ac">Armor Class:</label>
+                    <input type="number" id="batstats" name="ac" value="18"><br>
+                </div>
+
+                <div class="col-sm">
+                    <label for="initiative">Initiative:</label>
+                    <input type="number" id="batstats" name="init">
+                </div>
+                    <div class="col-sm">
+                        
+                        <label for="speed">Speed:</label>
+                        <input type="number" id="batstats" name="speed" value="30">
+                        <label for="speed">ft.</label>
+                    </div>
+                    <div class="col-sm">
+                        <label for="mhp">Max HP:</label>
+                        <input type="number" id="batstats" name="mhp" value="36"><br><br>
+                    </div>
+                    <div class="col-sm">
+                        <label for="nhd">Hit Dice:</label>
+                        <input type="text" id="batstats" name="hitdice" value="4d10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div id="step-5">
+            <h2>Step 5: Abilities, Equipment, Spellcasting, Etc.</h2>
+
+            <p>Depending on the options you chose above, you will gain different abilities, equipment, and spells. 
+            Feel free to use this box to keep track of them.
+            </p>
+
+            <h3>Currency:</h3>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="copper">Copper</label>
+                    <input type="number" id="curr" name="cop"><br>
+                </div>
+
+                <div class="col-sm">
+                    <label for="silver">Silver</label>
+                    <input type="number" id="curr" name="sil">
+                </div>
+                <div class="col-sm">     
+                    <label for="electrum">Electrum</label>
+                    <input type="number" id="curr" name="ele">
+                </div>
+                <div class="col-sm">
+                    <label for="gold">Gold</label>
+                    <input type="number" id="curr" name="gold">
+                </div>
+                <div class="col-sm">
+                    <label for="platinum">Platinum</label>
+                    <input type="number" id="curr" name="plat">
+                </div>
+            </div>
+
+            <br><br>
+
+            <h3>Languages and Proficiencies (MAX 80 CHARACTERS):</h3>
+            <textarea id="misc" name="lang" rows="2" cols="80">Common, Dwarvish, and Elvish</textarea>
+            
+            <br><br>
+
+            <h3>Equipment (MAX 80 CHARACTERS):</h3>
+            <textarea id="misc" name="equip" rows="2" cols="80">Longsword, javelins (5), chain mail, shield, explorer's pack, bell, and scroll of pedigree.</textarea>
+
+            <br><br>
+
+            <h3>Personality Traits (MAX 80 CHARACTERS):</h3>
+            <textarea id="misc" name="traits" rows="2" cols="80">You are convinced that the common folk love you for your kindness and generosity.</textarea>
+
+            <br><br>
+
+            <h3>Spells (MAX 80 CHARACTERS):</h3>
+            <textarea id="misc" name="spells" rows="2" cols="80">1st level (3 slots): bless, compelled duel, heroism, sanctuary, and searing smite</textarea>
+        </div>
     </div>
+
+        <br><br>
+        
+        <div id="step-6">
+            <h2>Step 6: Export</h2>
+
+            <p>You're almost done! Just click the buttons below to export your character.
+            </p>
+                <div class="container">
+                    <div class="row">
+                        <!-- Adding numerous columns to get the spacing right -->
+                        <div class="col-lg"></div>
+                        <div class="col-lg"></div>
+                        <div class="col-lg"></div>
+                        <div class="col-lg"></div>
+                        <div class="col-lg">
+                            <input type="submit" name="submit" value="Export" style="width: 200px;">
+                        </div>
+                        <div class="col-lg"></div>
+                        <div class="col-lg"></div>
+                        <div class="col-lg"></div>
+                        <div class="col-lg"></div>
+                    </div>
+                </div>
+            <br>
+        </div>
+</div>
 </form>
        
 

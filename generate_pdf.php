@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 
     $pdf->Cell(50, 10, 'Level:', 0, 0, 'R');
     $pdf->Cell(50, 10, $_POST['charlev'], 0, 0, 'L');
-    $pdf->Cell(50, 10, 'Allignment:', 0, 0, 'R');
+    $pdf->Cell(50, 10, 'Alignment:', 0, 0, 'R');
     $pdf->Cell(50, 10, $_POST['align1'] . ' ' . $_POST['align2'], 0, 1, 'L');
 
     $pdf->SetFont('helvetica', 'B', 16);
@@ -76,7 +76,8 @@ if (isset($_POST['submit'])) {
     $pdf->Cell(50, 10, $_POST['save'], 0, 1, 'L');
 
     // Abilities
-    $pdf->Cell(50, 10, 'Abilities:', 0, 0, 'R');
+    $pdf->Cell(0, 10, 'Abilities:', 0, 0, 'C');
+    $pdf->Ln();
     $pdf->Cell(50, 10, $_POST['abil'], 0, 1, 'L');
 
     
@@ -99,28 +100,60 @@ if (isset($_POST['submit'])) {
 
     $pdf->Cell(50, 10, '# of Hit Dice:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['hitdice'], 0, 1, 'L');
+    
+    $pdf->Ln();
+    $pdf->Ln();
+    $pdf->Ln();
+
+    $pdf->Cell(0, 10, 'Step 5 continued on next page', 0, 1, 'C');
+
+    $pdf->SetFont('helvetica', 'B', 16);
+
+    $pdf->Ln();
 
     $pdf->Cell(0, 10, 'Step 5: Abilities, Equipment, Spellcasting, Etc.', 0, 1, 'C');
+
+    $pdf->SetFont('helvetica', '', 16);
+
+    $pdf->Cell(0, 10, 'Currency:', 0, 0, 'C');
     $pdf->Ln();
     $pdf->SetFont('helvetica', '', 14);
-    $pdf->Cell(50, 10, 'Currency:', 0, 0, 'R');
+
     $pdf->Cell(50, 10, 'Copper:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['cop'], 0, 1, 'L');
+    $pdf->Cell(50, 10, $_POST['cop'], 0, 0, 'L');
     $pdf->Cell(50, 10, 'Silver:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['sil'], 0, 1, 'L');
+    $pdf->Cell(50, 10, $_POST['sil'], 0, 1, 'L');
+
     $pdf->Cell(50, 10, 'Electrum:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['ele'], 0, 1, 'L');
+    $pdf->Cell(50, 10, $_POST['ele'], 0, 0, 'L');
     $pdf->Cell(50, 10, 'Gold:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['gold'], 0, 1, 'L');
+    $pdf->Cell(50, 10, $_POST['gold'], 0, 1, 'L');
+
     $pdf->Cell(50, 10, 'Platinum:', 0, 0, 'R');
     $pdf->Cell(0, 10, $_POST['plat'], 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Languages and Proficiencies:', 0, 0, 'R');
-    $pdf->Cell(0, 10, $_POST['lang'], 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Equipment:', 0, 0, 'R');
+
+    $pdf->Ln();
+
+    $pdf->Cell(0, 10, 'Languages and Proficiencies:', 0, 0, 'C');
+    $pdf->Ln();
+    $pdf->Cell(50, 10, $_POST['lang'], 0, 1, 'L');
+
+    $pdf->Ln();
+
+    $pdf->Cell(0, 10, 'Equipment:', 0, 0, 'C');
+    $pdf->Ln();
     $pdf->Cell(0, 10, $_POST['equip'], 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Personality Traits:', 0, 0, 'R');
+
+    $pdf->Ln();
+
+    $pdf->Cell(0, 10, 'Personality Traits:', 0, 0, 'C');
+    $pdf->Ln();
     $pdf->Cell(0, 10, $_POST['traits'], 0, 1, 'L');
-    $pdf->Cell(50, 10, 'Spells:', 0, 0, 'R');
+
+    $pdf->Ln();
+
+    $pdf->Cell(0, 10, 'Spells:', 0, 0, 'C');
+    $pdf->Ln();
     $pdf->Cell(0, 10, $_POST['spells'], 0, 1, 'L');
 
     // Output the generated PDF to the browser
